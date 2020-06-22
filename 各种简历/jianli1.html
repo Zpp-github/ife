@@ -26,6 +26,21 @@
             vertical-align: middle;
         }
 
+        a {
+            color: #000;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        /* hover要放在visited之后 */
+        a:visited {
+            color: #4e7282;
+        }
+
+        a:hover {
+            color: red;
+        }
+
         body {
             /* css3抗锯齿形，让文字显示的更加清晰 */
             -webkit-font-smoothing: antialiased;
@@ -162,11 +177,13 @@
         }
 
         .module1 th {
-            padding-right:25px;
+            padding-right: 25px;
         }
-        .module1 td{
+
+        .module1 td {
             padding-right: 50px;
         }
+
         .avatar {
             position: absolute;
             top: 0;
@@ -174,6 +191,7 @@
             width: 160px;
             height: 150px;
         }
+
         .logoBottom {
             position: absolute;
             right: 40px;
@@ -233,7 +251,7 @@
                         <th>学&emsp;&emsp;历</th>
                         <td>本科</td>
                         <th>毕业院校</th>
-                        <td>百度前端学院</td>
+                        <td><a href="http://ife.baidu.com/">百度前端技术学院</a></td>
                     </tr>
                 </table>
                 <img src="images/avatar.jpg" alt="" class="avatar">
@@ -251,6 +269,7 @@
                 <p>主修课程：</p>
                 <p>课程是挺多的自己也认真学了就是吧忘得差不都了我也很无奈加上今年疫情更加不好找工作了面试了几个发现自己好菜啊所以开始学习抓紧补补我只想找个工作好好工作好好学习提升自己挺喜欢编程的并且有些执着于此但公司又不是慈善机构不能创收的人怎么会要但我觉得我是有利用价值的只是需要一个机会等相关课程
                 </p>
+                <p>学习历程：<a href="https://github.com/Zpp-github/ife">https://github.com/Zpp-github/ife</a></p>
             </div>
 
             <div class="box">
