@@ -1,0 +1,77 @@
+* {
+    /* 清除内边距、外边距 */
+    margin: 0;
+    padding: 0;
+    /* 盒子大小为 width，padding和border不会撑大盒子 */
+    box-sizing: border-box;
+}
+
+body {
+    /* css3抗锯齿形，让文字显示的更加清晰 */
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+    /* \5B8B\4F53  宋体 避免浏览器解析CSS代码时候出现乱码的问题 */
+    font: 16px/1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+    color: #333;
+}
+
+p,
+span {
+    font-weight: 700;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.first {
+    margin-left: 0;
+}
+
+.w {
+    width: 854px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: gray;
+}
+
+.title {
+    width: 100%;
+    line-height: 50px;
+    padding-left: 25px;
+    background-color: gray;
+}
+
+h1 {
+    font-size: 22px;
+    color: #fff;
+}
+
+h3 {
+    display: block;
+    float: left;
+    width: 100px;
+    line-height: 120px;
+    text-align: center;
+    background-color: #ddd;
+}
+
+.main {
+    border: 1px solid #ddd;
+}
+
+.box {
+    overflow: hidden;
+    zoom:1;
+    height: 120px;
+    border-bottom: 1px solid #eee;
+}
+
+.detail {
+    padding-top: 10px;
+    padding-left: 120px;
+}
