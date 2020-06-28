@@ -1,10 +1,14 @@
 ### 参考与学习
 - [编码规范](https://github.com/ecomfe/spec)
 - [Web 建站技术中，HTML、HTML5、XHTML、CSS、SQL、JavaScript、PHP、ASP.NET、Web Services 是什么？](https://www.zhihu.com/question/22689579)
-- [W3School的HTML教程](https://www.w3school.com.cn/html/index.asp)
-- [W3School的HTML5教程](https://www.w3school.com.cn/html5/index.asp)
 - [MDN Web开发入门](https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web)
 - [ 顾轶灵——如何理解 Web 语义化？](https://www.zhihu.com/question/20455165)
+
+#### HTML
+- [W3School的HTML教程](https://www.w3school.com.cn/html/index.asp)
+- [W3School的HTML5教程](https://www.w3school.com.cn/html5/index.asp)
+
+#### 初始CSS
 - [MDN-CSS 介绍](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps)
 - [MDN-CSS如何工作](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
 - [MDN-CSS 语法](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
@@ -28,11 +32,36 @@
 - [MDN-盒模型](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model)
 - [MDN-再述盒模型](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_boxes/Box_model_recap)
 - [W3C](https://www.w3.org/TR/2011/REC-CSS2-20110607/box.html#box-model)
+
+#### 浮动
 - [MDN-浮动](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
 - [W3C 浮动](https://www.w3.org/TR/2011/REC-CSS2-20110607/visuren.html#floats)
 - [如何理解 CSS 中的浮动布局方式？](https://www.zhihu.com/question/19915431)
 - [清除浮动（clearfix hack）](http://zh.learnlayout.com/clearfix.html)
 - [What methods of ‘clearfix’ can I use?](https://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use)
+
+#### 布局
+- [定位 | MDN](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/%E5%AE%9A%E4%BD%8D)
+- [定位实例练习 | MDN](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
+- [flex - css(层叠样式表) | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex)
+- [flex布局的基本概念 - css(层叠样式表) | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+- [Flexbox 弹性盒子 | MDN](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
+- [学习CSS布局](http://zh.learnlayout.com/)
+- [CSS布局(三) 布局模型 | 柴小智](http://www.cnblogs.com/chaixiaozhi/p/8481253.html)
+- [CSS布局(四) Float | 柴小智](http://www.cnblogs.com/chaixiaozhi/p/8481778.html)
+- [CSS布局(五) 网页布局方式 | 柴小智](http://www.cnblogs.com/chaixiaozhi/p/8486647.html)
+- [CSS布局(六) 对齐方式 | 柴小智](http://www.cnblogs.com/chaixiaozhi/p/8490725.html)
+- [七种实现左侧固定，右侧自适应两栏布局的方法 | 胡不归](https://segmentfault.com/a/1190000010698609)
+- [圣杯布局和双飞翼布局](https://www.jianshu.com/p/f9bcddb0e8b4)
+- [CSS深入理解流体特性和BFC特性下多栏自适应布局 | 张鑫旭](http://www.zhangxinxu.com/wordpress/2015/02/css-deep-understand-flow-bfc-column-two-auto-layout/)
+- [三种三栏网页宽度自适应布局方法 | 张鑫旭](http://www.zhangxinxu.com/wordpress/2009/11/%E6%88%91%E7%86%9F%E7%9F%A5%E7%9A%84%E4%B8%89%E7%A7%8D%E4%B8%89%E6%A0%8F%E7%BD%91%E9%A1%B5%E5%AE%BD%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94%E5%B8%83%E5%B1%80%E6%96%B9%E6%B3%95/)
+- [写给自己看的display: flex布局教程 | 张鑫旭](https://www.zhangxinxu.com/wordpress/2018/10/display-flex-css3-css/)
+- [这可能是史上最全的CSS自适应布局总结教程](https://www.cnblogs.com/qieguo/p/5421252.html)
+- [自适应网页设计（Responsive Web Design）](http://www.ruanyifeng.com/blog/2012/05/responsive_web_design.html)
+- [CSS3 Flexbox 布局完全指南(图解 Flexbox 布局详细教程)](https://www.html.cn/archives/8629)
+- [一劳永逸的搞定 flex 布局 | 掘金](https://juejin.im/post/58e3a5a0a0bb9f0069fc16bb)
+- [30 分钟学会 Flex 布局](https://zhuanlan.zhihu.com/p/25303493)
+- [Flex 布局教程：语法篇 | 阮一峰](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
 
 ### 项目
 - 做一个简历
