@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三栏布局position左右固定中自适应</title>
+    <style>
+        /* 实现一个三栏布局，左侧固定宽度，右侧固定宽度，中间部分宽度随浏览器宽度变化而自适应变化 */
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .left,
+        .right {
+
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 100%;
+        }
+
+        .left {
+            left: 0;
+            background-color: red;
+        }
+
+        .right {
+            right: 0;
+            background-color: skyblue;
+        }
+
+        .center {
+            height: 100%;
+            background-color: wheat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="center"></div>
+</body>
+
+</html>

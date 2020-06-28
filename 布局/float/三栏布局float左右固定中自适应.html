@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三栏布局float左右固定中自适应</title>
+    <style>
+        /* 实现一个三栏布局，左侧固定宽度，右侧固定宽度，中间部分宽度随浏览器宽度变化而自适应变化 */
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        .left,
+        .right {
+            width: 250px;
+            height: 100%;
+        }
+
+        .left {
+            float: left;
+            background-color: red;
+        }
+
+        .right {
+            float: right;
+            background-color: skyblue;
+        }
+
+        .center {
+            height: 100%;
+            background-color: wheat;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 谁自适应谁在下面 -->
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="center"></div>
+</body>
+
+</html>

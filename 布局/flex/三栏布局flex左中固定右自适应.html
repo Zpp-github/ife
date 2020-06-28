@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三栏布局flex左中固定右自适应</title>
+    <style>
+        /* 实现一个三栏布局，左侧固定宽度，中间固定宽度，右侧根据浏览器宽度变化而自适应变化 */
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+        }
+
+        .left,
+        .center {
+            width: 250px;
+            height: 100%;
+        }
+
+        .left {
+            flex: 0 0 auto;
+            /* 等同于flex: none; */
+            background-color: red;
+        }
+
+        .center {
+            flex: 0 0 auto;
+            /* 等同于flex: none; */
+            background-color: wheat;
+        }
+
+        .right {
+            order: 1;
+            width: 100%;
+            height: 100%;
+            background-color: skyblue;
+        }
+
+        /* 或删掉order: 1;，使left为order: -1px;，使center为order: -1px; */
+    </style>
+</head>
+
+<body>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="center"></div>
+</body>
+
+</html>

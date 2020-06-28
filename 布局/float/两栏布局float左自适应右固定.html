@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>两栏布局float左自适应右固定</title>
+    <style>
+        /* 实现一个两栏布局，右侧固定宽度，左侧根据浏览器宽度进行自适应变化 */
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        .left {
+            height: 100%;
+            background-color: red;
+        }
+
+        .right {
+            float: right;
+            width: 666px;
+            height: 100%;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 谁自适应谁在下面 -->
+    <div class="right"></div>
+    <div class="left"></div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>两栏布局flex左30%右70%</title>
+    <style>
+        /* 实现一个两栏布局，左侧占30%宽度，右侧占70%宽度 */
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+        }
+
+        .left {
+            width: 30%;
+            height: 100%;
+            background-color: red;
+        }
+
+        .right {
+            width: 70%;
+            height: 100%;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 顺序改变记得改变代码 -->
+    <div class="left"></div>
+    <div class="right"></div>
+</body>
+
+</html>
