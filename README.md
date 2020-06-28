@@ -62,6 +62,7 @@
 - [一劳永逸的搞定 flex 布局 | 掘金](https://juejin.im/post/58e3a5a0a0bb9f0069fc16bb)
 - [30 分钟学会 Flex 布局](https://zhuanlan.zhihu.com/p/25303493)
 - [Flex 布局教程：语法篇 | 阮一峰](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+- [CSS布局之三栏布局 | yvonneit](https://juejin.im/post/5c8e0065f265da68183d3cd6)
 
 ### 项目
 - 做一个简历
