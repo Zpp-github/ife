@@ -118,12 +118,12 @@ header {
     display: inline-block;
     width: 30px;
     line-height: 36px;
+    border: 1px solid #000;
+    background-color: #b2dd99;
+    color: #56813d;
+    font-size: 16px;
     text-align: center;
     vertical-align: bottom;
-    color: #56813d;
-    background-color: #b2dd99;
-    font-size: 16px;
-    border: 1px solid #000;
 }
 
 .banner .menu_tab .current {
@@ -144,16 +144,16 @@ header {
 
 .main .menu ul li {
     line-height: 52px;
-    text-align: center;
-    font-size: 16px;
     padding: 0 30px;
     /* 盒子向左移动，左边框正好压住上一个盒子的右边框，使两个边框合二为一 */
     margin-left: -1px;
-    background-color: #eee;
+    font-size: 16px;
     border: 1px solid #ccc;
     border-bottom: transparent;
     border-top-left-radius: 21px;
     border-top-right-radius: 21px;
+    background-color: #eee;
+    text-align: center;
 }
 
 .main .menu ul .current {
@@ -162,18 +162,18 @@ header {
 
 /* 内容 */
 .main .home_list {
-    width: 962px;
-    margin-left: -10px;
     display: flex;
     flex-wrap: wrap;
+    width: 962px;
+    margin-left: -10px;
 }
 
 .main .home_list .box {
     line-height: 176px;
-    text-align: center;
     margin-top: 8px;
     margin-left: 10px;
     border: 1px solid #ccc;
+    text-align: center;
 }
 
 .box1,
@@ -210,7 +210,7 @@ header {
 footer {
     height: 200px;
     padding-top: 20px;
+    background-color: #666;
     font-size: 16px;
     text-align: center;
-    background-color: #666;
 }
