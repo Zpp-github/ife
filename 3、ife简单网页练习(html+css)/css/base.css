@@ -1,0 +1,104 @@
+/* 初始化样式文件 */
+
+* {
+    /* 清除内边距、外边距 */
+    margin: 0;
+    padding: 0;
+    /* 盒子大小为 width，padding和border不会撑大盒子 */
+    box-sizing: border-box;
+}
+
+body {
+    /* css3抗锯齿形，让文字显示的更加清晰 */
+    -webkit-font-smoothing: antialiased;
+    background-color: #ddd;
+    /* \5B8B\4F53  宋体 避免浏览器解析CSS代码时候出现乱码的问题 */
+    font: 16px/1.5 '\5B8B\4F53' sans-serif;
+    font-weight: lighter;
+    color: #000;
+}
+
+/* 清除li的列表样式 */
+li {
+    list-style: none;
+}
+
+/* 斜体的文字不倾斜 */
+em,
+i {
+    font-style: normal
+}
+
+img {
+    /* 清除图片边框，照顾低版本浏览器，如果图片外面包含了链接会有边框问题 */
+    border: 0;
+    /* 清除图片底侧有空白缝隙的问题 */
+    vertical-align: middle;
+}
+
+/* 当鼠标经过时，鼠标变成小手形状 */
+button,
+input[type=submit] {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+button,
+input,
+textarea {
+    font-family:  Arial, Helvetica, sans-serif;
+    /* 去掉默认的灰色边框 */
+    border: 0;
+    /* 去掉默认的获得焦点后的蓝色边框 */
+    outline: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+a:hover {
+    color: rgb(255, 100, 0);
+}
+
+/* 大版心 */
+.com1 {
+    width: 1600px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+/* 小版心 */
+.com2 {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+/* 小小版心 */
+.com3 {
+    width: 970px;
+    margin: 0 auto;
+}
+
+/* 盒子左浮动 */
+.fl {
+    float: left;
+}
+
+/* 盒子右浮动 */
+.fr {
+    float: right;
+}
+
+/* 哪里需要清除浮动，就给哪个标签添加 class="clearfix"  */
+.clearfix {
+    overflow: hidden;
+    *zoom: 1
+}
+
+h1,
+h5 {
+    font-weight: lighter;
+}

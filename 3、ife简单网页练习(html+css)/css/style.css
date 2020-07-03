@@ -1,0 +1,490 @@
+/* 专属样式文件 */
+
+/* 透明灰色遮罩 */
+.mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+
+/* 头部 */
+header {
+    height: 990px;
+    background: url(../image/upload/background01.jpg) no-repeat;
+    color: #fff;
+}
+
+header .mask {
+    padding-top: 200px;
+}
+
+/* 标题模块 */
+header .title {
+    width: 730px;
+    margin: 0 auto 100px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 62px;
+}
+
+.title p {
+    margin-top: 60px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, .6);
+}
+
+/* 登录模块 */
+.login {
+    width: 970px;
+    height: 250px;
+    margin: 0 auto;
+    padding-top: 58px;
+    border: 1px solid rgba(231, 231, 231, .3);
+    text-align: center;
+}
+
+.login h5 {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.login p {
+    margin-top: 10px;
+    margin-bottom: 45px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, .4);
+}
+
+.login ul li {
+    display: inline-block;
+}
+
+.login .inp {
+    width: 292px;
+    height: 50px;
+    margin-right: 30px;
+    padding-left: 20px;
+    border: 1px solid rgba(231, 231, 231, .3);
+    background-color: transparent;
+    color: rgba(255, 255, 255, .4);
+}
+
+.login .inp:focus {
+    border-color: rgba(255, 100, 0, .4);
+    color: #fff;
+}
+
+.login #btn {
+    width: 120px;
+    height: 50px;
+    background-color: #fff;
+    transition: .5s;
+}
+
+.login #btn:hover {
+    color: #fff;
+    background-color: rgba(255, 100, 0, .3);
+}
+
+
+
+/* Ready-made, customizable, HTML landing page sections */
+.banner {
+    height: 710px;
+    padding-top: 86px;
+}
+
+.banner h5 {
+    width: 200px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner .sTitle {
+    width: 730px;
+    margin: 30px auto 20px;
+    font-size: 42px;
+    text-align: center;
+}
+
+.banner .box {
+    margin-left: 68px;
+}
+
+.banner .box li {
+    position: relative;
+    float: left;
+    width: 432px;
+    height: 136px;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+.banner .box li:nth-child(even) {
+    margin-left: 170px;
+}
+
+.banner .box li .img01 {
+    margin-right: 20px;
+}
+
+.banner .box li .img02 {
+    margin-right: 11px;
+}
+
+.banner .box li a {
+    margin-left: 27px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner .box li p {
+    float: right;
+    width: 355px;
+    margin: 20px auto 0;
+    color: rgba(0, 0, 0, .6);
+}
+
+
+
+/* policies */
+.policies {
+    height: 800px;
+    background: url(../image/upload/background02.png) no-repeat;
+    color: #fff;
+}
+
+.policies .mask {
+    padding: 104px 0 96px 315px;
+}
+
+.policies .mask .description span {
+    display: block;
+    width: 370px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 42px;
+}
+
+.policies .mask .description p {
+    width: 370px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, .6);
+}
+
+.policies .mask .description button {
+    width: 240px;
+    height: 60px;
+    margin-top: 50px;
+    margin-right: 20px;
+    border: 1px solid rgba(231, 231, 231, .3);
+    border-radius: 3px;
+    color: #fff;
+    transition: .5s;
+}
+
+.policies .mask .description button:hover {
+    color: gray;
+    background-color: #fff;
+}
+
+.policies .mask .data {
+    width: 644px;
+    margin-right: -29px;
+    padding: 30px 0 28px 30px;
+    border: 1px solid rgba(231, 231, 231, .3);
+    border-radius: 36px;
+}
+
+
+
+/* main */
+.main .box1,
+.main .box2,
+.main .box3,
+.main .box4 {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+/* 第一个盒子 */
+.main .box1 {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.main .box1 h5 {
+    margin-bottom: 40px;
+    font-size: 42px;
+}
+
+.main .box1 ul {
+    margin-left: 64px;
+}
+
+.singleton,
+.hero,
+.portland {
+    width: 337px;
+    padding: 42px 42px;
+    margin-left: 10px;
+}
+
+.main .box1 p {
+    margin-top: 42px;
+}
+
+
+/* 第二个盒子 */
+.main .box2 .content1 {
+    height: 999px;
+    padding-top: 114px;
+}
+
+.learn img {
+    float: left;
+    margin-right: 100px;
+}
+
+.learn {
+    height: 350px;
+    margin-bottom: 80px;
+}
+
+.learn .description {
+    padding-top: 74px;
+}
+
+.learn .description h5,
+.choose .description h5 {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.choose {
+    position: relative;
+}
+
+.choose .description {
+    position: absolute;
+    top: 74px;
+    left: 0;
+    width: 321px;
+    margin-right: 100px;
+}
+
+.choose img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/* 第三个盒子 */
+.box3 {
+    padding-top: 85px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.box3 .content2 h5 {
+    font-size: 42px;
+}
+
+.box3 .content2 p {
+    width: 686px;
+    margin: 30px auto 28px;
+    font-size: 18px;
+}
+
+.box3 .content2 ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+}
+
+.box3 .content2 ul li {
+    position: relative;
+    width: 470px;
+    height: 340px;
+    margin-top: 30px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.box3 .content2 ul li:hover .mask1_box3 {
+    display: block;
+}
+
+.box3 .content2 ul li .mask1_box3 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 470px;
+    height: 340px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.box3 .content2 ul li .mask1_box3 h5 {
+    margin-top: 106px;
+    margin-bottom: 14px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box3 .content2 ul li .mask1_box3 span {
+    font-size: 12px;
+}
+
+.box3 .content2 ul li .mask1_box3 .link {
+    margin-top: 34px;
+}
+
+.box3 .content2 ul li .mask1_box3 .link a {
+    display: inline-block;
+    width: 54px;
+    line-height: 56px;
+    margin-right: 20px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    transition: .2s;
+}
+
+.box3 .content2 ul li .mask1_box3 .link a:hover {
+    border-color: rgba(255, 100, 0, .6);
+}
+
+
+/* 第四个盒子 */
+.box4 {
+    padding-top: 71px;
+    padding-bottom: 71px;
+}
+
+.letter {
+    padding: 50px;
+    padding-bottom: 66px;
+    margin-right: 114px;
+    border: 1px solid #e7e7e7;
+    text-align: center;
+}
+
+.letter h5 {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.letter input,
+.letter textarea[name=msg] {
+    width: 370px;
+    margin-top: 30px;
+    border: 1px solid #e7e7e7;
+    font-size: 15px;
+}
+
+.letter input::placeholder,
+.letter textarea[name=msg]::placeholder {
+    color: rgba(0, 0, 0, .5);
+}
+
+.letter input[name=email],
+.letter input[name=subject],
+.letter textarea[name=msg] {
+    padding: 20px;
+}
+
+.letter input[name=email],
+.letter input[name=subject],
+.letter input[name=submit] {
+    height: 50px;
+}
+
+.letter textarea[name=msg] {
+    height: 140px;
+}
+
+.letter input[name=submit] {
+    color: #fff;
+    background-color: #000;
+}
+
+.letter input:focus,
+.letter textarea:focus {
+    border-color: rgba(255, 100, 0, .4);
+}
+
+.contacts {
+    width: 370px;
+    padding: 78px 16px 112px 16px;
+}
+
+.contacts h5 {
+    font-size: 42px;
+}
+
+.contacts p {
+    margin-top: 28px;
+    margin-bottom: 72px;
+}
+
+.contacts ul li {
+    margin-top: 30px;
+}
+
+
+
+/* 尾部 */
+footer {
+    padding-top: 85px;
+    padding-bottom: 118px;
+    background-color: #000;
+    color: #fff;
+}
+
+footer dl {
+    float: left;
+    width: 246px;
+    margin-right: 52px;
+}
+
+footer dl:nth-child(4) {
+    margin-right: 0;
+}
+
+footer dl:nth-child(4) dd {
+    font-size: 18px;
+}
+
+footer dt {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer dd {
+    margin-top: 26px;
+}
+
+footer dd a {
+    margin-top: 28px;
+    color: rgba(255, 255, 255, .3);
+}
+
+footer dl .links {
+    margin-top: 36px;
+}
+
+footer dl .links ul li {
+    float: left;
+    margin-right: 26px;
+}
+
+footer dl .links ul li a img {
+    opacity: 0.3;
+}
