@@ -2,8 +2,10 @@
 - [ife简单网页.html
 ](https://zpp-github.github.io/ife/3%E3%80%81ife%E7%AE%80%E5%8D%95%E7%BD%91%E9%A1%B5%E7%BB%83%E4%B9%A0(html%2Bcss)/ife%E7%AE%80%E5%8D%95%E7%BD%91%E9%A1%B5.html)
 
+<br/>
+<br/>
 
-## ife简单网站规范
+## ife简单网页规范
 ### 一、命名规范
 - 小驼峰命名法
 
@@ -28,10 +30,10 @@
 #### 1、代码格式化
 - 采用展开格式（Expanded）
 ```css
-.jdc {
-    display: block;
-    width: 50px;
-}
+  .jdc {
+      display: block;
+      width: 50px;
+  }
 ```
 #### 2、属性书写顺序
 - 遵循以下顺序：
@@ -41,23 +43,23 @@
     - 其他属性（CSS3）：content / cursor / border-radius / box-shadow / text-shadow / background:linear-gradient …
 
 ```css
-.jdc {
-    display: block;
-    position: relative;
-    float: left;
-    width: 100px;
-    height: 100px;
-    margin: 0 10px;
-    padding: 20px 0;
-    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-    color: #333;
-    background: rgba(0,0,0,.5);
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -o-border-radius: 10px;
-    -ms-border-radius: 10px;
-    border-radius: 10px;
-}
+  .jdc {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100px;
+      height: 100px;
+      margin: 0 10px;
+      padding: 20px 0;
+      font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+      color: #333;
+      background: rgba(0,0,0,.5);
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -o-border-radius: 10px;
+      -ms-border-radius: 10px;
+      border-radius: 10px;
+  }
 ```
 
 ### 四、代码主要命名介绍
@@ -66,6 +68,8 @@ className|含义
 `.com1`|版心(宽1600px，水平居中)
 `.com2`|版心(宽1170px，水平居中)
 `.com3`|版心(宽970px，水平居中)
+`.fl`|`float: left;` 左浮动
+`.fr`|`float: right;` 右浮动
 `.clearfix`|清除浮动
 `.current`|当前(可与JavaScript结合进行模块切换)
 `.mask`|透明灰色遮罩
@@ -78,3 +82,7 @@ className|含义
 `#btn`|登录模块提交按钮
 `.policies`|中国智能车配套政策模块
 `footer`|底部模块
+
+### 主要使用方法
+- 不设置盒子大小，使用padding和margin撑开盒子的方法居多，方便以后添加内容
+- 浮动可使用`float`、`position`、`flex` (记得清除浮动)
