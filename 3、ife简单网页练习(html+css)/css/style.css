@@ -69,12 +69,15 @@ header h1 {
     padding-left: 20px;
     border: 1px solid rgba(231, 231, 231, .3);
     background-color: transparent;
+    color: #fff;
+}
+
+.login .inp::placeholder {
     color: rgba(255, 255, 255, .4);
 }
 
 .login .inp:focus {
     border-color: rgba(255, 100, 0, .4);
-    color: #fff;
 }
 
 .login #btn {
