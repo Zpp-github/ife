@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="description" content="ife复杂网页练习HTML+CSS" />
+    <meta name="description" content="ife复杂网页练习HTML+CSS" />
+    <meta name="keywords" content="乐音,Zpp-github,web前端,html,css,练习" />
+    <meta name="author" content="乐音,leyin" />
+    <title>ife复杂网页练习HTML+CSS</title>
+    <!-- 引入初始化样式文件 -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引入专属样式文件 -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 最左侧一列要求自适应浏览器高度，左上面4个按钮相对浏览器左上角固定位置，左下方两个按钮相对浏览器左下角固定位置
+        左侧第二列(蓝色背景色)导航列固定宽度，高度也是自适应浏览器高度，最下面的Monthly Goals部分的内容相对浏览器下边固定位置
+        整个白色区域自适应宽度，右上方的人脸，名字部分相对浏览器右上角固定位置
+        白色区域左侧列固定宽度，右侧列自适应宽度 */
+
+        .messages {
+            /* 右侧白色区域信息过多时会出现滑动条 */
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+        }
+
+        .messages .top {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            line-height: 80px;
+            padding: 0 30px;
+            border-bottom: 1px solid #e9e9e9;
+        }
+
+        .chat {
+            width: 100%;
+        }
+
+        .chat .operate_button_list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px 20px 16px;
+            border-bottom: 1px solid #e9e9e9
+        }
+
+        .chat .operate_button_list .subjectSperson {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+
+        .chat .operate_button_list .subjectSperson h3 {
+            font-size: 18px;
+            font-weight: normal;
+            font-family: 'Arial';
+            color: #585d68;
+        }
+
+        .chat .operate_button_list .subjectSperson .circle_green {
+            width: 8px;
+            height: 8px;
+            margin-left: 10px;
+            background-color: #1bb934;
+            border-radius: 50%;
+        }
+
+        .chat .operate_button_list .button_list_right {
+            display: flex;
+            align-items: center;
+        }
+
+        .chat .operate_button_list .button_list_right #button_setting,
+        .chat .operate_button_list .button_list_right #button_direction {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .chat .operate_button_list .button_list_right button {
+            width: 37px;
+            height: 32px;
+            border: 1px solid #ced0da;
+            margin-left: -1px;
+            background-color: #f8f9fb;
+        }
+
+        .chat .operate_button_list .button_list_right p {
+            line-height: 30px;
+            margin-left: 45px;
+            margin-right: 15px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #56688a;
+        }
+
+        .chat .operate_button_list .button_list_right button:hover {
+            position: relative;
+            border-color: rgba(255, 100, 0, .3);
+            background-color: rgba(255, 100, 0, .1);
+        }
+
+        .chat_detail {
+            height: 100%;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 最左边的一列 -->
+    <div class="application">
+        <ul class="aps">
+            <li>
+                <a href="#">
+                    <img src="images/itemIcon/item01_min.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/itemIcon/item02_min.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/itemIcon/item03_min.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/itemIcon/add_min.png" alt="">
+                </a>
+            </li>
+        </ul>
+        <div class="bg"></div>
+        <ul class="bottom">
+            <li>
+                <a href="#">
+                    <img src="images/itemIcon/grid_min.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/itemIcon/settings_min.png" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 最左边的一列 止 -->
+
+    <!-- 第二列 -->
+    <div class="nav">
+        <div>
+            <dl class="menu">
+                <dt>
+                    <em>MENU</em>
+                    <img src="images/itemIcon/settings_min.png" alt="设置">
+                </dt>
+                <dd>
+                    <span>Overview</span>
+                </dd>
+                <dd>
+                    <span>Sales</span>
+                    <em id="sales_num">54</em>
+                </dd>
+                <dd>
+                    <span>Your Staff</span>
+                </dd>
+                <dd>
+                    <span>Analytics & Targeting</span>
+                </dd>
+                <dd>
+                    <span>What’s New</span>
+                </dd>
+            </dl>
+            <dl class="products">
+                <dt>
+                    <em>YOUR PRODUCTS</em>
+                    <img src="images/itemIcon/settings_min.png" alt="设置">
+                </dt>
+                <dd>
+                    <img src="images/icon/bookOfWisdom.png" alt="">
+                    <span>Books</span>
+                </dd>
+                <dd>
+                    <img src="images/icon/videoCamera.png" alt="">
+                    <span>Tutorials</span>
+                </dd>
+                <dd>
+                    <img src="images/icon/painting.png" alt="">
+                    <span>Stocks</span>
+                </dd>
+                <dd>
+                    <img src="images/icon/chart.png" alt="">
+                    <span>Infographics</span>
+                </dd>
+            </dl>
+            <dl class="dashboard">
+                <dt>
+                    <em>DASHBOARD</em>
+                    <img src="images/itemIcon/settings_min.png" alt="设置">
+                </dt>
+                <dd>
+                    <div id="selected"></div>
+                    <span class="current">Messages</span>
+                    <em id="message_num">21</em>
+                </dd>
+                <dd>
+                    <span>Connections</span>
+                </dd>
+                <dd>
+                    <span>Integrations</span>
+                    <img src="images/icon/alert.png" alt="" id="alarm">
+                </dd>
+                <dd>
+                    <span>Account Settings</span>
+                </dd>
+                <dd>
+                    <span>App Settings</span>
+                </dd>
+            </dl>
+        </div>
+        <div class="bg"></div>
+        <div class="bottom">
+            <span>Monthly Goals</span><span>$580/$3200</span>
+            <div class="progress">
+                <em class="num"></em>
+            </div>
+        </div>
+    </div>
+    <!-- 第二列 止 -->
+
+    <!-- 右侧白色区域 -->
+    <div class="messages">
+        <!-- 顶部 -->
+        <div class="top">
+            <h3 id="dashboard_selected" class="fl">Messages</h3>
+            <div class="bg"></div>
+            <div class="user">
+                <div class="per01">
+                    <img src="images/profilePicture/02_min.png" alt="profilePicture" class="head">
+                    <a href="#">
+                        <img src="images/icon/status.jpg" alt="status" class="status">
+                    </a>
+                </div>
+                <div class="per02">
+                    <h4>Jordan J.</h4>
+                    <span>Administrator</span>
+                </div>
+                <img src="images/icon/dropdown.png" alt="dropdown" class="dropdown">
+            </div>
+        </div>
+        <div class="bottom">
+            <!-- 左侧联系人 -->
+            <div class="detail">
+                <div class="person">
+                    <div class="search">
+                        <input type="text" placeholder="Search">
+                        <button>
+                            <img src="images/icon/search.png" alt="搜索">
+                        </button>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="info clearfix">
+                                <img src="images/profilePicture/01_min.png" alt="" class="fl">
+                                <a href="#" class="name name_selected fl">
+                                    <em class="circle_blue current fl"></em>
+                                    Bessie Berry
+                                </a>
+                                <span id="time" class="fr">3m</span>
+                                <br />
+                                <span id="app">Twitter</span>
+                            </div>
+                            <!-- 14px -->
+                            <div class="article">
+                                <p>
+                                    I pay for the 4Mb/sec down, 512 Kb/sec up service from O2. In fact, it's relatively
+                                    quick,
+                                    and stable. It's not perfect, but I really don't have issues, as long as I keep
+                                    track of
+                                    what I'm doing on it.
+                                </p>
+                                <em class="num">4</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info clearfix">
+                                <img src="images/profilePicture/03_min.png" alt="" class="fl">
+                                <a href="#" class="name fl">
+                                    Victor Weber
+                                </a>
+                                <span id="time" class="fr">8m</span>
+                                <br />
+                                <span id="app">Adobe</span>
+                            </div>
+                            <!-- 14px -->
+                            <div class="article">
+                                <p>
+                                    I shared this on my fb wall a few months back, and I thought I'd share it here again
+                                    because it's such a great hahahahahahahahahahahahahahahahahahahahahahah
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info clearfix">
+                                <img src="images/profilePicture/08_min.png" alt="" class="fl">
+                                <a href="#" class="name fl">
+                                    Dustin Benson
+                                </a>
+                                <span id="time" class="fr">Yesterday</span>
+                                <br />
+                                <span id="app">Facebook</span>
+                            </div>
+                            <!-- 14px -->
+                            <div class="article">
+                                <p>
+                                    If there is anyone who needs an invitation please add yourself in the comments of
+                                    this
+                                    post!
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info clearfix">
+                                <img src="images/profilePicture/04_min.png" alt="" class="fl">
+                                <a href="#" class="name fl">
+                                    Jack Mason
+                                </a>
+                                <span id="time" class="fr">Yesterday</span>
+                                <br />
+                                <span id="app">Yahoo</span>
+                            </div>
+                            <!-- 14px -->
+                            <div class="article">
+                                <p>
+                                    BruteDC is a peer-to-peer movie+tv series sharing and downloading platform which
+                                    works
+                                    on intranet inside hahahahahahahahahahahahahahahahahahahahahahah
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info clearfix">
+                                <img src="images/profilePicture/05_min.png" alt="" class="fl">
+                                <a href="#" class="name fl">
+                                    Stephen Shelton
+                                </a>
+                                <span id="time" class="fr">13 Jun</span>
+                                <br />
+                                <span id="app">Snapchat</span>
+                            </div>
+                            <!-- 14px -->
+                            <div class="article">
+                                <p>
+                                    Yes, p2p traffic is often filtered (QoSed). Although i do use BT on O2 wires, and in
+                                    good days dl speed hahahahahahahahahahahahahahahahahahahahahahah
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info clearfix">
+                                <img src="images/profilePicture/06_min.png" alt="" class="fl">
+                                <a href="#" class="name fl">
+                                    Sally Willis
+                                </a>
+                                <span id="time" class="fr">12 Jun</span>
+                                <br />
+                                <span id="app">Twitter</span>
+                            </div>
+                            <!-- 14px -->
+                            <div class="article">
+                                <p>
+                                    Yes, it's O2: 'internet extreme', which is no longer offered.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info clearfix">
+                                <img src="images/profilePicture/07_min.png" alt="" class="fl">
+                                <a href="#" class="name fl">
+                                    Robert Patton
+                                </a>
+                                <span id="time" class="fr">9 Jun</span>
+                                <br />
+                                <span id="app">A Team</span>
+                            </div>
+                            <!-- 14px -->
+                            <div class="article">
+                                <p>
+                                    I change my service from this 4Mh plan to their much very very very very very very
+                                    very haha haha hahahahahahahahahahahahahahahahahahah
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info clearfix">
+                                <img src="images/profilePicture/08_min.png" alt="" class="fl">
+                                <a href="#" class="name fl">
+                                    Dustin Benson
+                                </a>
+                                <span id="time" class="fr">3 Jun</span>
+                                <br />
+                                <span id="app">Facebook</span>
+                            </div>
+                            <!-- 14px -->
+                            <div class="article">
+                                <p>
+                                    If there is anyone who needs an invitation please add yourself in the comments of
+                                    this
+                                    post!
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info clearfix">
+                                <img src="images/profilePicture/08_min.png" alt="" class="fl">
+                                <a href="#" class="name fl">
+                                    Dustin Benson
+                                </a>
+                                <span id="time" class="fr">3 Jun</span>
+                                <br />
+                                <span id="app">Facebook</span>
+                            </div>
+                            <!-- 14px -->
+                            <div class="article">
+                                <p>
+                                    If there is anyone who needs an invitation please add yourself in the comments of
+                                    this
+                                    post!
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 右侧信息 -->
+            <div class="chat">
+                <div class="operate_button_list">
+                    <div class="subjectSperson">
+                        <h3>Bessie Berry</h3>
+                        <div class="circle_green"></div>
+                    </div>
+                    <div class="bg"></div>
+                    <div class="button_list_right">
+                        <div id="button_setting">
+                            <button class="buttom_user">
+                                <img src="images/icon/user.png" alt="">
+                            </button>
+                            <button class="buttom_upload">
+                                <img src="images/icon/upload.png" alt="">
+                            </button>
+                            <button class="buttom_trash">
+                                <img src="images/icon/trash.png" alt="">
+                            </button>
+                        </div>
+                        <p id="button_info">
+                            <samp id="number1">1</samp> of <samp id="nubmer2">28</samp>
+                        </p>
+                        <div id="button_direction">
+                            <button class="buttom_arrowL">
+                                <img src="images/icon/arrow_left.png" alt="">
+                            </button>
+                            <button class="buttom_arrowR">
+                                <img src="images/icon/arrow_right.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat_detail">
+                    <div class="chat01">hah</div>
+                    <div class="chat02">haha</div>
+                    <div class="chat03"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 右侧白色区域止 -->
+</body>
+
+</html>

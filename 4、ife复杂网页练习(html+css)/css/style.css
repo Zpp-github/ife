@@ -1,0 +1,362 @@
+/* 专属样式文件 */
+
+body {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* 防止当浏览高度过低时，bottom的内容会随着浏览器提升覆盖上方的内容 */
+.bg {
+    flex-grow: 1;
+    min-width: 100px;
+}
+
+/* 最左边的一列 */
+.application {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    width: 100px;
+    height: 100%;
+    background-color: #1d2531;
+}
+
+.application .aps img {
+    width: 60px;
+    height: 60px;
+}
+
+.application .aps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.application .aps li {
+    margin-bottom: 20px;
+}
+
+.application .bottom img {
+    width: 16px;
+    height: 16px;
+}
+
+.application .bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px;
+}
+
+
+/* 第二列 */
+.nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    width: 250px;
+    height: 100%;
+    padding: 15px 28px 20px;
+    background-color: #222c3c;
+}
+
+.nav dl {
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(42, 53, 71);
+}
+
+.nav dl:last-child {
+    border-bottom: none;
+}
+
+.nav dt {
+    position: relative;
+    margin-top: 15px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #5b6779;
+}
+
+.nav dt img {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+.nav dd {
+    position: relative;
+    line-height: 35px;
+    padding-left: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.nav dd:hover {
+    background-color: rgba(65, 108, 182, 0.2);
+}
+
+.nav dd span {
+    color: #b7c0cd;
+}
+
+.nav dd img {
+    margin-right: 10px;
+}
+
+.nav dd em {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 32px;
+    line-height: 24px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: #2298f0;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.nav dd #alarm {
+    position: absolute;
+    right: -10px;
+    top: 6px;
+}
+
+.nav dd #selected {
+    position: absolute;
+    top: 15px;
+    left: -28px;
+    width: 2px;
+    height: 4px;
+    border-radius: 0 2px 2px 0;
+    box-shadow: 4px 0 5px 5px rgba(35,153,241,.1);
+    background-color: #2399f1;
+}
+
+.nav dd .current {
+    color: #fff;
+}
+.nav dd,
+.nav .bottom {
+    color: #fff;
+}
+
+.nav .bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.nav .bottom span {
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.nav .bottom .progress {
+    position: relative;
+    width: 190px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #2d3848;
+}
+
+.nav .bottom .progress .num {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: #876ae5;
+}
+
+
+
+/* 右侧白色区域 */
+/* 顶部 */
+.messages .top h3 {
+    color: #354052;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.messages .top .user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 20px;
+}
+
+.messages .top .user .per01 {
+    position: relative;
+    margin-right: 14px;
+}
+
+.messages .top .user .per01 .head {
+    width: 46px;
+    height: 46px;
+}
+
+.messages .top .user .per01 a {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.messages .top .user .per01 a .status {
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+}
+
+.messages .top h4 {
+    color: #2399f1;
+    font-size: 16px;
+}
+
+.messages .top span {
+    color: #b5b5b5;
+    font-size: 14px;
+}
+
+.messages .top .user img.dropdown {
+    width: 11px;
+    height: 7px;
+    margin-left: 35px;
+}
+
+
+.messages .bottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+
+/* 左侧联系人 */
+.detail .person {
+    width: 400px;
+    height: 100%;
+    border-right: 1px solid #e9e9e9;
+    /* 记得删除 */
+}
+
+.detail .person .search {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.detail .person .search input {
+    width: 340px;
+    height: 37px;
+    margin-left: 15px;
+    padding-left: 15px;
+    padding-right: 40px;
+    font-size: 14px;
+    border: 1px solid #e9e9e9;
+    transition: .2s;
+}
+
+.detail .person .search input::placeholder {
+    font-size: 14px;
+    color: #9fa9ba;
+}
+
+.detail .person .search input:focus {
+    border-color: rgba(255, 34, 25, .3);
+}
+
+.detail .person .search button {
+    position: relative;
+    left: -30px;
+}
+
+.detail .person ul li {
+    height: 130px;
+    padding: 15px 20px 25px 30px;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.detail .person .info {
+    margin-bottom: 15px;
+}
+
+.detail .person .info .circle_blue {
+    width: 8px;
+    height: 8px;
+    margin-top: 7px;
+    margin-right: 6px;
+    background-color: #2399f1;
+    border-radius: 50%;
+}
+
+.detail .person .info .name {
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #585d68;
+}
+
+.detail .person .info .name_selected {
+    color: #2399f1;
+}
+
+.detail .person .info .name:hover,
+.detail .person .info .name_selected:hover {
+    color: rgba(255, 100, 0, .4);
+}
+
+.detail .person .info #time {
+    font-size: 14px;
+    font-weight: normal;
+    color: #7f8fa4;
+}
+
+.detail .person .info #app {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #b5b5b5;
+}
+
+.detail .person .article {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail .person .article p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    width: 340px;
+    color: #585d68;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.article .num {
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
+    padding-top: 2px;
+    text-align: center;
+    background-color: #2096f0;
+    color: #fff;
+    border-radius: 50%;
+}
+
+
+/* 右侧信息 */
