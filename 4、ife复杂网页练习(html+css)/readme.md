@@ -1,4 +1,5 @@
 ## 预览
+- [ife复杂网页.html](https://zpp-github.github.io/ife/4%E3%80%81ife%E5%A4%8D%E6%9D%82%E7%BD%91%E9%A1%B5%E7%BB%83%E4%B9%A0(html%2Bcss)/ife%E5%A4%8D%E6%9D%82%E7%BD%91%E9%A1%B5.html)
 
 <br/>
 <br/>
@@ -61,7 +62,30 @@
 ```
 
 ### 四、代码主要命名介绍
+|name|description
+--|--
+`.bg`|空白部分(防止当浏览过低或过宽时，后面的内容会随着浏览器提升覆盖上方的内容)
+`.circle_green`|绿色小圆圈
+`.circle_blue`|蓝色小圆圈
+`.application`|最左边的一列
+`.aps`|小程序
+`.bottom`|底部固定部分
+`.nav`|第二列导航部分
+`.progress`|进度条
+`.messages`|右侧白色区域
+`#dashboard_selected`|第二列dashboard中被选中的模块
+`.user`|用户
+`.dropdown`|下拉列表
+`.detail`|左侧联系人
+`.chat`|右侧聊天信息
+`.search`|搜索框
+`#time`|消息距离现在的时间
+`#app`|使用何种app发送的消息
+`.article`|内容
+`.num`|聊天数目(包括本人)
+`.operate_button_list`|上部操作台
+`.button_list_right`|右侧区域的按钮列表
+`.chat_detail`|聊天细节
 
-
-### 主要使用方法
-
+### 五、主要方法
+- 主要使用了`display: flex`和`position`布局
