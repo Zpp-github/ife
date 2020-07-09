@@ -18,97 +18,6 @@
         左侧第二列(蓝色背景色)导航列固定宽度，高度也是自适应浏览器高度，最下面的Monthly Goals部分的内容相对浏览器下边固定位置
         整个白色区域自适应宽度，右上方的人脸，名字部分相对浏览器右上角固定位置
         白色区域左侧列固定宽度，右侧列自适应宽度 */
-
-        .messages {
-            /* 右侧白色区域信息过多时会出现滑动条 */
-            overflow: auto;
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-            background-color: #fff;
-        }
-
-        .messages .top {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            line-height: 80px;
-            padding: 0 30px;
-            border-bottom: 1px solid #e9e9e9;
-        }
-
-        .chat {
-            width: 100%;
-        }
-
-        .chat .operate_button_list {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 20px 20px 16px;
-            border-bottom: 1px solid #e9e9e9
-        }
-
-        .chat .operate_button_list .subjectSperson {
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: center;
-        }
-
-        .chat .operate_button_list .subjectSperson h3 {
-            font-size: 18px;
-            font-weight: normal;
-            font-family: 'Arial';
-            color: #585d68;
-        }
-
-        .chat .operate_button_list .subjectSperson .circle_green {
-            width: 8px;
-            height: 8px;
-            margin-left: 10px;
-            background-color: #1bb934;
-            border-radius: 50%;
-        }
-
-        .chat .operate_button_list .button_list_right {
-            display: flex;
-            align-items: center;
-        }
-
-        .chat .operate_button_list .button_list_right #button_setting,
-        .chat .operate_button_list .button_list_right #button_direction {
-            display: flex;
-            flex-wrap: nowrap;
-        }
-
-        .chat .operate_button_list .button_list_right button {
-            width: 37px;
-            height: 32px;
-            border: 1px solid #ced0da;
-            margin-left: -1px;
-            background-color: #f8f9fb;
-        }
-
-        .chat .operate_button_list .button_list_right p {
-            line-height: 30px;
-            margin-left: 45px;
-            margin-right: 15px;
-            font-size: 14px;
-            font-weight: 700;
-            color: #56688a;
-        }
-
-        .chat .operate_button_list .button_list_right button:hover {
-            position: relative;
-            border-color: rgba(255, 100, 0, .3);
-            background-color: rgba(255, 100, 0, .1);
-        }
-
-        .chat_detail {
-            height: 100%;
-            background-color: bisque;
-        }
     </style>
 </head>
 
@@ -255,6 +164,7 @@
                 <img src="images/icon/dropdown.png" alt="dropdown" class="dropdown">
             </div>
         </div>
+        <!-- 下部 -->
         <div class="bottom">
             <!-- 左侧联系人 -->
             <div class="detail">
@@ -277,7 +187,6 @@
                                 <br />
                                 <span id="app">Twitter</span>
                             </div>
-                            <!-- 14px -->
                             <div class="article">
                                 <p>
                                     I pay for the 4Mb/sec down, 512 Kb/sec up service from O2. In fact, it's relatively
@@ -288,6 +197,7 @@
                                 </p>
                                 <em class="num">4</em>
                             </div>
+                            <div class="current_blue"></div>
                         </li>
                         <li>
                             <div class="info clearfix">
@@ -439,7 +349,7 @@
                     </ul>
                 </div>
             </div>
-            <!-- 右侧信息 -->
+            <!-- 右侧聊天信息 -->
             <div class="chat">
                 <div class="operate_button_list">
                     <div class="subjectSperson">
@@ -473,9 +383,126 @@
                     </div>
                 </div>
                 <div class="chat_detail">
-                    <div class="chat01">hah</div>
-                    <div class="chat02">haha</div>
-                    <div class="chat03"></div>
+                    <div class="chat01">
+                        <div class="people01">
+                            <div class="l">
+                                <img src="images/profilePicture/01_min.png" alt="">
+                            </div>
+                            <div class="r">
+                                <em class="chat_name">Bessie Berry</em>
+                                <span class="chat_time">8:31 AM</span>
+                                <p>
+                                    Hi guys Ive got the O2 package and have really slow internet. A speed check online
+                                    said
+                                    i can get 3mbps but it seems more like 0.5 these days, just freezing and taking ages
+                                    to
+                                    open pages and open audio files for example. I have decided to switch to the UPC
+                                    package
+                                    which offers 10mbps but do you think i will get it?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="people02">
+                            <div class="l">
+                                <img src="images/profilePicture/02_min.png" alt="">
+                            </div>
+                            <div class="r">
+                                <em class="chat_name">Jordan Jackson</em>
+                                <span class="chat_time">8:31 AM</span>
+                                <p>
+                                    I have internet for 9 month and nevere could benefit from the full capacity of
+                                    5Mbit/s
+                                    as it is filtered by O2 when it detect traffic on public p2p sharing in my
+                                    situation all
+                                    my internet speed slows to 512Kbit/s. I never had 400KB/s on when downloading
+                                    from p2p
+                                    public servers like torrent emule etc. I downoad with 500KB/s from private
+                                    trakers
+                                    instead. So conlcusion O2 block trafic on p2p connections. I have made hundreds
+                                    of test
+                                    in Italy and Sweden and Romania with the same file to doanload with the same
+                                    setting and
+                                    same antivirus and just needed to open ports in firewall and forward same ports
+                                    and the
+                                    speed was at full capacity in 1 minute. here in 9 month never had this luck.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat02">
+                        <div class="people01">
+                            <div class="l">
+                                <img src="images/profilePicture/01_min.png" alt="">
+                            </div>
+                            <div class="r">
+                                <em class="chat_name">Bessie Berry</em>
+                                <span class="chat_time">8:31 AM</span>
+                                <p>
+                                    Funny comparison. so would the proper antivirus not slow down the internet as much
+                                    or do you mean a freebie doenst protect the computer from viruses?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="people02">
+                            <div class="l">
+                                <img src="images/profilePicture/02_min.png" alt="">
+                            </div>
+                            <div class="r">
+                                <em class="chat_name">Jordan Jackson</em>
+                                <span class="chat_time">8:31 AM</span>
+                                <p>
+                                    I pay for the 4Mb/sec down, 512 Kb/sec up service from O2, and haven't had any
+                                    problems. In fact, it's relatively quick, and stable. It's not perfect, but I really
+                                    don't have issues, as long as I keep track of what I'm doing on it. I max out at
+                                    about 3 Mb/sec down, and 350 Kb/sec up. Probably because of a noisy telephone line,
+                                    not because I'm being throttled. When my uploads go over 25 KB/sec (note, bytes, not
+                                    bits), my download speed suffers. This is expected, as downloads require upload
+                                    bandwidth as well.
+                                </p>
+                                <ul>
+                                    <li>
+                                        <img src="images/upload/photo01_min.png" alt="" class="img">
+                                        <div class="mask">
+                                            <div class="searchAdd">
+                                                <img src="images/icon/searchAdd.png" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="images/upload/photo02_min.png" alt="" class="img">
+                                        <div class="mask">
+                                            <div class="searchAdd">
+                                                <img src="images/icon/searchAdd.png" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat03">
+                        <div class="people01">
+                            <div class="l">
+                                <img src="images/profilePicture/01_min.png" alt="">
+                            </div>
+                            <div class="r">
+                                <em class="chat_name">Bessie Berry</em>
+                                <span class="chat_time">8:31 AM</span>
+                                <p>
+                                    I pay for the 4Mb/sec down, 512 Kb/sec up service from O2. In fact, it's relatively
+                                    quick, and stable. It's not perfect, but I really don't have issues, as long as I
+                                    keep track of what I'm doing on it.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="add">
+                            <button>
+                                <img src="images/icon/add.png" alt="">
+                            </button>
+                            <input type="text"
+                                value="Well, kinda both :) but more of that second option, i`ve seen many systems infected and crawling with">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
