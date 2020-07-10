@@ -33,7 +33,11 @@
             result.innerHTML = Number(first.value) * Number(second.value)
         }
         btn4.onclick = function () {
-            result.innerHTML = Number(first.value) / Number(second.value)
+            if (second.value == 0) {
+                console.log('除数不能为0，请修改！');
+            } else {
+                result.innerHTML = Number(first.value) / Number(second.value)
+            }
         }
     </script>
 </body>
