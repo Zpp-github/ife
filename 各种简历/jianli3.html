@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简历</title>
+    <style>
+        * {
+            /* 清除内边距、外边距 */
+            margin: 0;
+            padding: 0;
+            /* 盒子大小为 width，padding和border不会撑大盒子 */
+            box-sizing: border-box;
+        }
+
+        /* 清除li的列表样式 */
+        li {
+            list-style: none;
+        }
+
+        img {
+            /* 清除图片边框，照顾低版本浏览器，如果图片外面包含了链接会有边框问题 */
+            border: 0;
+            /* 清除图片底侧有空白缝隙的问题 */
+            vertical-align: middle;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        /* hover要放在visited之后 */
+        a:visited {
+            color: #4e7282;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        body {
+            /* css3抗锯齿形，让文字显示的更加清晰 */
+            -webkit-font-smoothing: antialiased;
+            background-color: skyblue;
+            /* \5B8B\4F53  宋体 避免浏览器解析CSS代码时候出现乱码的问题 */
+            font: 16px/1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+            color: #000;
+        }
+
+        /* 哪里需要清除浮动，就给哪个标签添加 class="clearfix"  */
+        .clearfix:after {
+            visibility: hidden;
+            clear: both;
+            display: block;
+            content: ".";
+            height: 0
+        }
+
+        .clearfix {
+            *zoom: 1
+        }
+
+        /* 大版心 */
+        .w {
+            position: relative;
+            width: 828px;
+            margin: 5px auto;
+            padding-bottom: 50px;
+            background-color: #fff;
+        }
+
+        /* 版心 */
+        .com {
+            width: 730px;
+            margin: 0 auto;
+        }
+
+        /* 盒子左浮动 */
+        .fl {
+            float: left;
+        }
+
+        /* 盒子右浮动 */
+        .fr {
+            float: right;
+        }
+
+        h1 {
+            display: inline-block;
+            margin: 22px 15px 10px 8px;
+            color: #4e7282;
+            font-size: 48px;
+        }
+
+        header span {
+            color: #4e7282;
+            font-size: 18px
+        }
+
+        .logo {
+            margin-top: 38px;
+        }
+
+        .logo img {
+            margin-right: 10px;
+        }
+
+        /* 分割头部和主题的横线 好看 */
+        .line {
+            border: 5px solid #4e7282
+        }
+
+        .main {
+            padding-bottom: 44px;
+            border-left: 1px solid #4e7282;
+        }
+
+        .box {
+            position: relative;
+            margin-top: 44px;
+            border-bottom: 1px solid #4e7282;
+        }
+
+        .bg {
+            position: absolute;
+            top: -24px;
+            left: -14px;
+            width: 98px;
+            line-height: 24px;
+            padding-left: 20px;
+            background-color: #4e7282;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .triangle,
+        .striangle {
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+
+        .triangle {
+            top: -24px;
+            left: 84px;
+            border-top: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 12px solid #4e7282;
+            border-left: 12px solid #4e7282;
+        }
+
+        .striangle {
+            top: 0;
+            left: -14px;
+            border-top: 4px solid #4e7282;
+            border-right: 7px solid #4e7282;
+            border-bottom: 4px solid transparent;
+            border-left: 7px solid transparent;
+        }
+
+        .con {
+            padding: 24px 22px 0 22px;
+        }
+
+        .con p {
+            margin-bottom: 5px;
+        }
+
+        .module1 {
+            position: relative;
+        }
+
+        .module1 th {
+            padding-right: 25px;
+        }
+
+        .module1 td {
+            padding-right: 50px;
+        }
+
+        .avatar {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            width: 160px;
+            height: 150px;
+        }
+
+        .logoBottom {
+            position: absolute;
+            right: 40px;
+            bottom: 20px;
+            width: 45px;
+            height: 40px;
+            filter: blur(1.5px);
+        }
+
+        #btn {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w">
+        <!-- 头部 -->
+        <header class="com">
+            <h1>个人简历</h1>
+            <span>应聘职位：Web前端开发</span>
+            <div class="logo fr">
+                <img src="images/logoHat.png" alt="">
+                <img src="images/logoBag.png" alt="">
+                <img src="images/logoPen.png" alt="">
+            </div>
+        </header>
+
+        <div class="line"></div>
+
+        <!-- 主体部分 -->
+        <div class="main com">
+            <div class="box">
+                <div class="bg">
+                    <h3>基本信息</h3>
+                </div>
+                <div class="triangle"></div>
+                <div class="striangle"></div>
+            </div>
+            <div class="module1 con">
+                <table>
+                    <tr>
+                        <th>姓&emsp;&emsp;名</th>
+                        <td>张三</td>
+                        <th>年&emsp;&emsp;龄</th>
+                        <td>100岁</td>
+                    </tr>
+                    <tr>
+                        <th>民&emsp;&emsp;族</th>
+                        <td>汉</td>
+                        <th>政治面貌</th>
+                        <td>共青团员</td>
+                    </tr>
+                    <tr>
+                        <th>电&emsp;&emsp;话</th>
+                        <td>18600000000</td>
+                        <th>邮&emsp;&emsp;箱</th>
+                        <td>joinefe@baidu.com</td>
+                    </tr>
+                    <tr>
+                        <th>学&emsp;&emsp;历</th>
+                        <td>本科</td>
+                        <th>毕业院校</th>
+                        <td><a href="http://ife.baidu.com/">百度前端技术学院</a></td>
+                    </tr>
+                </table>
+                <img src="images/avatar.jpg" alt="" class="avatar">
+            </div>
+
+            <div class="box">
+                <div class="bg">
+                    <h3>教育背景</h3>
+                </div>
+                <div class="triangle"></div>
+                <div class="striangle"></div>
+            </div>
+            <div class="con">
+                <p>2016.09 - 2020.07 &emsp;&ensp; 百度前端学院 &emsp;&ensp; 计算机科学与技术学院 &emsp;&ensp; 计算机科学与技术专业</p>
+                <p>主修课程：</p>
+                <p>课程是挺多的自己也认真学了就是吧忘得差不都了我也很无奈加上今年疫情更加不好找工作了面试了几个发现自己好菜啊所以开始学习抓紧补补我只想找个工作好好工作好好学习提升自己挺喜欢编程的并且有些执着于此但公司又不是慈善机构不能创收的人怎么会要但我觉得我是有利用价值的只是需要一个机会等相关课程
+                </p>
+                <p>学习历程：<a href="https://github.com/Zpp-github/ife">https://github.com/Zpp-github/ife</a></p>
+            </div>
+
+            <div class="box">
+                <div class="bg">
+                    <h3>项目经验</h3>
+                </div>
+                <div class="triangle"></div>
+                <div class="striangle"></div>
+            </div>
+            <div class="con">
+                <p>稍微有那么几个项目因为在学校写的所以不成熟但我觉得还行哈起码还是可以上简历充充门面不至于太单薄</p>
+            </div>
+
+            <div class="box">
+                <div class="bg">
+                    <h3>实习经历</h3>
+                </div>
+                <div class="triangle"></div>
+                <div class="striangle"></div>
+            </div>
+            <div class="con">
+                <p>打算过完春节实习碰上疫情很多公司开始裁员招的人又不多加上咱经过长达一年的考研知识忘得差不多了就没有从事成相关工作</p>
+            </div>
+
+            <div class="box">
+                <div class="bg">
+                    <h3>所获荣誉</h3>
+                </div>
+                <div class="triangle"></div>
+                <div class="striangle"></div>
+            </div>
+            <div class="con">
+                <p>我觉得我得的荣誉也还拿得出手吧省级校级都有</p>
+            </div>
+
+            <div class="box">
+                <div class="bg">
+                    <h3>校园经历</h3>
+                </div>
+                <div class="triangle"></div>
+                <div class="striangle"></div>
+            </div>
+            <div class="con">
+                <p>参加了一些活动但也不能说明多少就是我还健在吧</p>
+            </div>
+            <div class="box">
+                <div class="bg">
+                    <h3>特殊爱好</h3>
+                </div>
+                <div class="triangle"></div>
+                <div class="striangle"></div>
+            </div>
+            <div class="con">
+                <button id="btn">点击此处查看偶的特殊爱好</button><p id="hobby"></p>
+            </div>
+        </div>
+        <!-- 主体部分止 -->
+
+        <img src="images/logoBottom.png" alt="" class="logoBottom">
+    </div>
+
+    <script>
+        var btn=document.getElementById('btn');
+        var hobby=document.getElementById('hobby');
+        btn.onclick=function(){
+            hobby.innerHTML='也没什么特殊爱好';
+        }
+    </script>
+</body>
+
+</html>
