@@ -64,6 +64,16 @@
 - [Flex 布局教程：语法篇 | 阮一峰](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
 - [CSS布局之三栏布局 | yvonneit](https://juejin.im/post/5c8e0065f265da68183d3cd6)
 
+#### JS
+- [JavaScript | W3School](http://www.w3school.com.cn/js/js_intro.asp)
+- [什么是JavaScript？ | MDN](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [如何存储你需要的信息 — 变量 |MDN](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/Variables)
+- [一文读懂JavaScript和ECMAScript的区别](https://www.oschina.net/translate/whats-the-difference-between-javascript-and-ecmascript)
+- [JavaScript历史 | W3School](http://www.w3school.com.cn/js/pro_js_history.asp)
+- [《JavaScript 高级程序设计》](https://book.douban.com/subject/10546125/)
+- [JS教程 | W3School](http://www.w3school.com.cn/js/index.asp)
+-[十进制转二进制 | 百度百科](https://baike.baidu.com/item/%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E4%BA%8C%E8%BF%9B%E5%88%B6/393189?fr=aladdin)
+
 ### 项目
 - 做一个简历
 - 参考：[羡撤的简历](http://zhangwenli.com/cv/cn.html)
