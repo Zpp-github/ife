@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>将输入的十进制整数转化为二进制(限位数)</title>
+    <!-- 实现当点击转化按钮时，将输入的十进制数字转化为二进制，并显示在result的所在标签内 -->
+    <!-- 转化显示后的二进制数为bin-bit中输入的数字宽度
+        例如dec-number为5，bin-bit为5，则转化后数字为00101
+        如果bin-bit小于转化后的二进制本身位数，则使用原本的位数
+        例如dec-number为5，bin-bit为2，依然输出101，但同时在console中报个错 -->
+</head>
+
+<body>
+    <input id="dec-number" type="number" placeholder="输入一个十进制非负整数">
+    <input id="bin-bit" type="number" placeholder="输入转化后二进制数字位数">
+    <button id="trans-btn">转化为二进制</button>
+    <p>运算结果：<span id="result"></span></p>
+    <script>
+        var num = document.getElementById('dec-number');
+        var bit = document.getElementById('bin-bit');
+        var btn = document.getElementById('trans-btn');
+        var result = document.getElementById('result');
+        // 创建数组
+        var arr = new Array();
+        var reArr = new Array();
+        btn.onclick = function () {
+            var bits = bit.value;
+            // 判断输入了数字且必须为一个非负整数
+            if (num.value == '') {
+                alert('请输入数字');
+                return;
+            } else if (num.value < 0) {
+                alert('请输入一个非负整数');
+                return;
+            } else if (num.value == 0) {
+                // 判断所输入数字是否为0，如果是，直接输出0，因为走正常路径调用数组，输出的是空
+                result.innerHTML = 0;
+                return;
+            } else {
+                var number = num.value;
+            }
+            // 调用十进制转化为二进制的函数
+            dec2bin(number, bits);
+            // 调用转置后的数组的函数
+            reverse(arr);
+            // 输出对应的二进制 （join() 输出数组的每个元素值，用指定的分隔符分隔）
+            result.innerHTML = reArr.join('');
+            // 清空数组 这样可以一直输入数字然后转化，不用每次都刷新页面
+            arr.splice(0, arr.length);
+            reArr.splice(0, reArr.length);
+        }
+
+        // 十进制转化为二进制函数
+        function dec2bin(decNumber, bits) {
+            while (decNumber > 0) {
+                arr[arr.length] = decNumber % 2;
+                decNumber = parseInt(decNumber / 2);
+            }
+            if (bits > arr.length) {
+                for (var i = arr.length; i < bits; i++) {
+                    arr[i] = 0;
+                }
+            } else {
+                console.log("控制位小于转换位数");
+            }
+        }
+
+        // 转置数组
+        function reverse(arr) {
+            for (var i = arr.length - 1; i >= 0; i--) {
+                reArr[reArr.length] = arr[i];
+            }
+        }
+    </script>
+</body>
+
+</html>
