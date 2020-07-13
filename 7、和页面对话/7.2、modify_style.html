@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        select {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <label>
+        <input id="school" name="status" type="radio">
+        School
+    </label>
+    <label>
+        <input id="company" name="status" type="radio">
+        Company
+    </label>
+
+    <select id="school-select">
+        <option>北京邮电大学</option>
+        <option>黑龙江大学</option>
+        <option>华中科技大学</option>
+    </select>
+
+    <select id="company-select">
+        <option>百度</option>
+        <option>爱奇艺</option>
+    </select>
+
+    <script>
+        var school = document.getElementById('school');
+        var company = document.getElementById('company');
+        var school_select = document.getElementById('school-select');
+        var company_select = document.getElementById('company-select');
+        // 当用户选择了 School 的单选框时，显示 School 的下拉选项，隐藏 Company 的下拉选项
+        // 当用户选择了 School 的单选框时，显示 Company 的下拉选项，隐藏 School 的下拉选项
+        school.onclick = function () {
+            school_select.style.display = 'block';
+            company_select.style.display = 'none';
+        }
+        company.onclick = function () {
+            school_select.style.display = 'none';
+            company_select.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

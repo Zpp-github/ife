@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .palette {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .palette li {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="palette">
+        <li style="background-color:crimson"></li>
+        <li style="background-color:bisque"></li>
+        <li style="background-color:blueviolet"></li>
+        <li style="background-color:coral"></li>
+        <li style="background-color:chartreuse"></li>
+        <li style="background-color:darkolivegreen"></li>
+        <li style="background-color:cyan"></li>
+        <li style="background-color:#194738"></li>
+    </ul>
+
+    <p class="color-picker"></p>
+
+    <script>
+        // 点击某一个 li 标签时，将 li 的背景色显示在 p 标签内，并将 p 标签中的文字颜色设置成 li 的背景色
+        // 事件委托
+        var ul = document.getElementsByClassName('palette')[0];
+        var p = document.getElementsByClassName("color-picker")[0]
+        ul.onclick = function (e) {
+            // 利用事件对象的 target 来找到当前点击的 li
+            var t = e.target;
+            // 获取被点击的 li 的背景色
+            var c = t.style.backgroundColor;
+            // 将 li 的背景色显示在 p 标签内
+            p.innerHTML = c;
+            // 将 p 标签中的文字颜色设置成 li 的背景色
+            p.style.color = c;
+        }
+    </script>
+</body>
+
+</html>

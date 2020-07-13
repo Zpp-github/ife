@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="name" type="text">
+    <button id="submit-btn">Submit</button>
+    <script>
+        var ipt = document.getElementById('name');
+        var btn = document.getElementById('submit-btn');
+        // 点击按钮 submit-btn 时，在console中输出 name 中的内容
+        btn.onclick = function () {
+            console.log(ipt.value);
+        }
+        document.onkeyup = function (e) {
+            // 在输入过程中，按回车键，在console中输出 name 中的内容
+            if (e.keyCode === 13) {
+                console.log(ipt.value);
+            }
+            // 在输入过程中，按 ESC 键，把输入框中的内容清空
+            if (e.keyCode === 27) {
+                ipt.value = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

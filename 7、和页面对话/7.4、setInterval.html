@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fade-obj" style="width:300px;height:300px;background:#000"></div>
+    <button id="fade-btn">淡出</button>
+
+    <script>
+        var fade_obj = document.getElementById('fade-obj');
+        var fade_btn = document.getElementById('fade-btn');
+        var fade = 1;
+        fade_btn.onclick = function () {
+            if (fade_btn.innerHTML == '淡出') {
+                // 点击按钮时，开始改变 fade-obj 的透明度，淡出（逐渐消失）动画，直到透明度为0
+                var timer_out = setInterval(function () {
+                    if (fade < 0) {
+                        clearInterval(timer_out);
+                        // 动画结束，按钮状态恢复，且文字变成“淡入”
+                        fade_btn.disabled = false;
+                        fade_btn.style.cursor = 'pointer';
+                        fade_btn.innerHTML = '淡入';
+                    } else {
+                        fade = fade - 0.1;
+                        fade_obj.style.opacity = fade;
+                        // 在动画过程中，按钮的状态变为不可点击
+                        fade_btn.disabled = true;
+                        fade_btn.style.cursor = 'not-allowed';
+                    }
+                }, 500);
+            } else if (fade_btn.innerHTML == '淡入') {
+                // 在 按钮显示 淡入 的状态时，点击按钮，开始一个“淡入”（逐渐出现）的动画，直到透明度完全不透明
+                var timer_in = setInterval(function () {
+                    if (fade > 1) {
+                        clearInterval(timer_in);
+                        // 动画结束，按钮状态恢复，且文字变成“淡出”
+                        fade_btn.disabled = false;
+                        fade_btn.style.cursor = 'pointer';
+                        fade_btn.innerHTML = '淡出';
+                    } else {
+                        fade = fade + 0.1;
+                        fade_obj.style.opacity = fade;
+                        // 在动画过程中，按钮的状态变为不可点击
+                        fade_btn.disabled = true;
+                        fade_btn.style.cursor = 'not-allowed';
+                    }
+                }, 500);
+            }
+        }
+    </script>
+</body>
+
+</html>
