@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串的用法</title>
+</head>
+
+<body>
+    <script>
+        // 实现一个字符串头尾去除空格的函数,注意需要去除的空格，包括全角、半角空格
+        function diyTrim(str) {
+            // 去除半角空格
+            // indexOf() 返回字串在另一个字符串中的位置(若没有，返回-1)
+            // replace(regexp/substr,replacement) 返回被替换后的字符串，regexp/substr被replacement替换
+            while (str.indexOf(' ') !== -1) {
+                str = str.replace(' ', '');
+            }
+            // 去除全角空格
+            while (str.indexOf('　') !== -1) {
+                str = str.replace('　', '');
+            }
+            return str;
+        }
+        // 测试用例
+        console.log(diyTrim(' a f b    ')); // ->afb
+        console.log(diyTrim('    ffdaf    ')); // ->ffdaf
+        console.log(diyTrim('1    ')); // ->1
+        console.log(diyTrim('　　f')); // ->f
+        console.log(diyTrim('  　  a f b 　　 ')); // ->afb
+        console.log(diyTrim(' ')); // ->
+        console.log(diyTrim('　')); // ->
+        console.log(diyTrim('')); // ->
+
+        // 去掉字符串str中，连续重复的地方
+        function removeRepetition(str) {
+            var result = '';
+            // 一定要先将str的长度取出来，因为在循环的时候每次切割字符串会改变字符串的长度
+            // slice(start,end) 返回要处理的字符串的子串，start起始位置，end终止位置(省略时默认为字符串的长度)
+            var len = str.length;
+            for (var i = 0; i < len; i++) {
+                if (str[0] == str[1]) {
+                    str = str.slice(1);
+                } else {
+                    result = result + str[0];
+                    str = str.slice(1);
+                }
+            }
+            return result;
+        }
+        // 测试用例
+        console.log(removeRepetition("aaa")); // ->a
+        console.log(removeRepetition("abbba")); // ->aba
+        console.log(removeRepetition("aabbaabb")); // ->abab
+        console.log(removeRepetition("")); // ->
+        console.log(removeRepetition("abc")); // ->abc
+    </script>
+</body>
+
+</html>
