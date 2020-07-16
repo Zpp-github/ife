@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 练习如何使用数组来实现队列，综合考虑使用数组的 push，pop，shift，unshift操作 -->
+    <!-- join('分隔符') 有把数组转化为字符串的方法,用指定的分隔符分割，默认 ',' -->
+    <!-- 本题队头对应数组中第一个元素，即最左侧的元素 -->
+
+    <input id="queue-input" type="text">
+    <p id="queue-cont">队列内容：apple&lt;-pear</p>
+    <button id="in-btn">入队</button>
+    <button id="out-btn">出队</button>
+    <button id="font-btn">打印队头元素内容</button>
+    <button id="empty-btn">判断队列是否为空</button>
+
+    <script>
+        var queue = ["apple", "pear"],
+            queueInput = document.getElementById('queue-input'),
+            queueCont = document.getElementById('queue-cont'),
+            inBtn = document.getElementById('in-btn'),
+            outBtn = document.getElementById('out-btn'),
+            fontBtn = document.getElementById('font-btn'),
+            emptyBtn = document.getElementById('empty-btn');
+
+        // 入队
+        inBtn.addEventListener('click', function () {
+            if (queueInput.value == '') {
+                return false;
+            } else {
+                queue.push(queueInput.value);
+                queueCont.innerHTML = '队列内容：' + queue.join('&lt;-');
+            }
+        })
+
+        // 出队
+        outBtn.addEventListener('click', function () {
+            queue.shift();
+            queueCont.innerHTML = '队列内容：' + queue.join('&lt;-');
+        })
+
+        // 打印队头元素内容
+        fontBtn.addEventListener('click', function () {
+            queueCont.innerHTML = '队列内容：' + queue[0];
+        })
+
+        // 判断队列是否为空
+        emptyBtn.addEventListener('click', function () {
+            if (queue.length == 0) {
+                queueCont.innerHTML = '队列为空';
+            } else {
+                queueCont.innerHTML = '队列不为空';
+            }
+        })
+    </script>
+</body>
+
+</html>
