@@ -8,9 +8,9 @@
 </head>
 
 <body>
-    <!-- 练习如何使用数组来实现队栈，综合考虑使用数组的 push，pop，shift，unshift操作 -->
+    <!-- 练习如何使用数组来实现栈，综合考虑使用数组的 push，pop，shift，unshift操作 -->
     <!-- join('分隔符') 有把数组转化为字符串的方法,用指定的分隔符分割，默认 ',' -->
-    <!-- 本题栈顶对应数组中最后一个元素，即最右侧的元素 -->
+    <!-- 本题栈顶对应数组中最后一个元素，即最右侧的元素。栈：后进先出 -->
 
     <input id="stack-input" type="text">
     <p id="stack-cont">栈内容：apple-&gt;pear</p>
@@ -31,16 +31,16 @@
         // 进栈
         pushBtn.addEventListener('click', function () {
             if (stackInput.value == '') {
-                return false
+                return false;
             } else {
-                stack.unshift(stackInput.value);
+                stack.push(stackInput.value);
                 stackCont.innerHTML = '栈内容：' + stack.join('-&gt;');
             }
         })
 
         // 退栈
         popBtn.addEventListener('click', function () {
-            stack.shift();
+            stack.pop();
             stackCont.innerHTML = '栈内容：' + stack.join('-&gt;');
         })
 
