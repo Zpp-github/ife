@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sort()</title>
+</head>
+
+<body>
+    <script>
+        // sort() 排序数组并返回新数组，会改变原来的数组
+        // 默认：如果没有设置升序降序规则，元素按照转换为的字符串的各个字符的Unicode位点进行排序
+
+        // reverse() 翻转数组并返回新数组，会改变原来的数组
+
+
+        // 将此数组分别按从大到小以及从小到大进行排序后在console中输出
+        var arr = [43, 54, 4, -4, 84, 100, 58, 27, 140];
+        arr.sort(function (a, b) {
+            return b - a;
+        })
+        console.log(arr);  // [140, 100, 84, 58, 54, 43, 27, 4, -4]
+
+        arr.sort(function (a, b) {
+            return a - b;
+        })
+        console.log(arr);  // [-4, 4, 27, 43, 54, 58, 84, 100, 140]
+
+
+        // 将此数组分别按字母顺序a - z及z - a进行排序，在console中输出
+        var arr1 = ['apple', 'dog', 'cat', 'car', 'zoo', 'orange', 'airplane'];
+        console.log(arr1.sort());  // ["airplane", "apple", "car", "cat", "dog", "orange", "zoo"]
+        console.log(arr1.reverse());  // ["zoo", "orange", "dog", "cat", "car", "apple", "airplane"]
+
+        // 将此二维数组，按照每个元素中第二个数从大到小的顺序进行排序输出，输出结果应该为：
+        var arr2 = [[10, 14], [16, 60], [7, 44], [26, 35], [22, 63]];
+        arr2.sort(function (a, b) {
+            return b[1] - a[1];
+        })
+        console.log(arr2); // [[22, 63], [16, 60], [7, 44], [26, 35], [10, 14]]
+
+
+        // 将此数组分别按元素对象的value值从小到大进行排序后输出
+        var arr3 = [
+            {
+                id: 1,
+                name: 'candy',
+                value: 40
+            }, {
+                id: 2,
+                name: 'Simon',
+                value: 50
+            }, {
+                id: 3,
+                name: 'Tony',
+                value: 45
+            }, {
+                id: 4,
+                name: 'Annie',
+                value: 60
+            }
+        ];
+        arr3.sort(function (a, b) {
+            return a.value - b.value;
+        })
+        console.log(arr3);
+    </script>
+</body>
+
+</html>

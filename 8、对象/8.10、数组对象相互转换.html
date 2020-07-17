@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 学习通用的数据用不同的数据结构进行存储，以及相互的转换
+
+        // 对象转为数组：
+        var scoreObject = {
+            "Tony": {
+                "Math": 95,
+                "English": 79,
+                "Music": 68
+            },
+            "Simon": {
+                "Math": 100,
+                "English": 95,
+                "Music": 98
+            },
+            "Annie": {
+                "Math": 54,
+                "English": 65,
+                "Music": 88
+            }
+        }
+        // 如上有一个用来存储学习成绩的对象，编写一个函数，将其转为如下的二维数组
+        var scoreArray = [
+            ["Tony", 95, 79, 68],
+            // ……
+        ];
+        // 解
+        var arr1 = [];
+        for (var i in scoreObject) {
+            var arr2 = [];
+            arr2.push(i);
+            for (var j in scoreObject[i]) {
+                arr2.push(scoreObject[i][j]);
+            }
+            arr1.push(arr2);
+        }
+        console.log(arr1);
+
+
+        // 数组转为对象：
+        var menuArr = [
+            [1, "Area1", -1],
+            [2, "Area2", -1],
+            [3, "Area1-1", 1],
+            [4, "Area1-2", 1],
+            [5, "Area2-1", 2],
+            [6, "Area2-2", 2],
+            [7, "Area1-2-3", 4],
+            [8, "Area2-2-1", 6],
+        ];
+        // 如上有一个用来存储多级菜单数据的数组，编写一个函数，将其转为如下的对象
+        var menuObject = {
+            "1": {
+                name: "Area1",
+                subMenu: {
+                    "3": {
+                        name: "Area1-1"
+                    },
+                    "4": {
+                        name: "Area1-2",
+                        subMenu: {
+                            "7": {
+                                name: "Area1-2-3"
+                            }
+                        }
+                    }
+                }
+            }
+            // ……
+        }
+        // 解
+
+
+
+
+        
+        // 例1
+        // var a = ['a', 'b', 'c'];
+        // var obj = {}
+        // a.forEach(function (item, index) {
+        //     obj[index] = item;
+        // })
+        // console.log(obj);
+
+        // 例2
+        // var arr = [
+        //     { id: 1, pid: '', name: '1AA' },
+        //     { id: 2, pid: '', name: '2AA' },
+        //     { id: 3, pid: '', name: '3AA' },
+        //     { id: 4, pid: 1, name: '4AA' },
+        //     { id: 5, pid: 2, name: '5AA' },
+        //     { id: 6, pid: 3, name: '6AA' },
+        //     { id: 7, pid: 4, name: '7AA' },
+        //     { id: 8, pid: 1, name: '8AA' },
+        //     { id: 9, pid: 5, name: '9AA' }
+        // ]
+        // var newArr = []
+        // arr.forEach(function (el) {
+        //     el.children = []
+        //     if (el.pid === '') {
+        //         newArr.push(el)
+        //     } else {
+        //         var parent = arr.find(_ => _.id === el.pid)
+        //         parent.children.push(el)
+        //     }
+        // })
+        // console.log(newArr);
+    </script>
+</body>
+
+</html>
