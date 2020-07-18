@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模拟时钟</title>
+</head>
+
+<body>
+    <div id="clock"></div>
+    <div id="clock1"></div>
+
+    <script>
+        // 要求：尽量让一个函数就做一个事情，而不要把所有的功能、代码揉在一起
+
+        var clock = document.getElementById('clock');
+        var clock1 = document.getElementById('clock1');
+
+        // 在页面中显示当前日期及时间，按秒更新
+        // 先调用一次函数，防止第一次刷新页面有空白
+        getTime();
+        var timer = setInterval(getTime, 1000);
+
+        // 某个日期返回这一天是星期几(中文)
+        function weeks_CN(day) {
+            var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            return week[day];
+        }
+        // 某个日期返回这一天是星期几(英文)
+        function weeks_EN(day) {
+            var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            return week[day];
+        }
+
+        // 日期出现个位数的情况前面补充0，补充为两位，比如1变为01
+        function addZero(time) {
+            return time < 10 ? '0' + time : time;
+        }
+
+        // 判断是am还是pm
+        function aOrP(hour) {
+            return hour > 12 ? 'PM' : 'AM';
+        }
+
+        // 判断12小时制的对应时间
+        function ap(hour) {
+            return addZero(hour > 12 ? hour - 12 : hour);
+        }
+
+        function getTime() {
+            var times = new Date();
+            // 年
+            var year = times.getFullYear();
+            // 月
+            var month = addZero(times.getMonth() + 1);
+            // 日
+            var date = addZero(times.getDate());
+            // 周
+            var day = weeks_CN(times.getDay());
+            var days = weeks_EN(times.getDay());
+            // 24小时制
+            var hour = addZero(times.getHours());
+            // 分
+            var minute = addZero(times.getMinutes());
+            // 秒
+            var second = addZero(times.getSeconds());
+            // 12小时制
+            var m = ap(hour);
+
+            var str = year + ' 年 ' + month + ' 月 ' + date + ' 日 ' + day + ' ' + hour + ' : ' + minute + ' : ' + second;
+            clock.innerHTML = str;
+            var str1 = year + ' - ' + month + ' - ' + date + ' ' + days + ' ' + m + ' : ' + minute + ' : ' + second + ' ' + aOrP(hour);
+            clock1.innerHTML = str1;
+        }
+    </script>
+</body>
+
+</html>
