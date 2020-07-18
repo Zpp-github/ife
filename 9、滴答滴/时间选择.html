@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>时间选择</title>
+</head>
+
+<body>
+    <select id="year-select"></select>
+    <select id="month-select"></select>
+    <select id="day-select"></select>
+    <select id="hour-select"></select>
+    <select id="minute-select"></select>
+    <select id="second-select"></select>
+
+    <p id="result-wrapper"></p>
+    <script>
+        //添加选项
+        var year = document.getElementById("year-select");
+        for (i = 0; i < 33; i++) {
+            var num = document.createElement('option');
+            num.text = 2000 + i;
+            year.add(num, null);
+        }
+        var month = document.getElementById("month-select");
+        for (i = 0; i < 12; i++) {
+            var num = document.createElement('option');
+            num.text = 1 + i;
+            month.add(num, null);
+        }
+        var day = document.getElementById("day-select");
+        for (i = 0; i < 31; i++) {
+            var num = document.createElement('option');
+            num.text = 1 + i;
+            day.add(num, null);
+        }
+        var hour = document.getElementById("hour-select");
+        for (i = 0; i < 24; i++) {
+            var num = document.createElement('option');
+            if (i < 10)
+                num.text = "0" + i;
+            else num.text = i;
+            hour.add(num, null);
+        }
+        var minute = document.getElementById("minute-select");
+        for (i = 0; i < 60; i++) {
+            var num = document.createElement('option');
+            if (i < 10)
+                num.text = "0" + i;
+            else num.text = i;
+            minute.add(num, null);
+        }
+        var second = document.getElementById("second-select");
+        for (i = 0; i < 60; i++) {
+            var num = document.createElement('option');
+            if (i < 10)
+                num.text = "0" + i;
+            else num.text = i;
+            second.add(num, null);
+        }
+
+        //月份区别
+        function refresh() {
+            var year_value = year.options[year.selectedIndex].value;
+            var month_value = month.options[month.selectedIndex].value;
+            if (month_value == "4" || month_value == "6" || month_value == "9" || month_value == "11") {
+                day.options[30].hidden = true;
+            } else if (month_value == "2" && !(Number(year_value) % 4)) {
+                day.options[30].hidden = true;
+                day.options[29].hidden = true;
+            } else if (month_value == "2" && Number(year_value) % 4) {
+                day.options[30].hidden = true;
+                day.options[29].hidden = true;
+                day.options[28].hidden = true;
+            }
+        }
+
+        function startTime() {
+            var weekday = ["日", "一", "二", "三", "四", "五", "六"];
+            var today = new Date();
+
+            // 提取日期所需信息
+            var year_value = year.options[year.selectedIndex].value;
+            var month_value = month.options[month.selectedIndex].value;
+            var date_value = day.options[day.selectedIndex].value;
+            var hour_value = hour.options[hour.selectedIndex].value;
+            var minute_value = minute.options[minute.selectedIndex].value;
+            var second_value = second.options[second.selectedIndex].value;
+            var d = new Date(year_value, Number(month_value) - 1, date_value, hour_value, minute_value, second_value);
+            var day_value = weekday[d.getDay()];
+
+            // 常量
+            var seconds = 1000;
+            var minutes = seconds * 60;
+            var hours = minutes * 60;
+            var days = hours * 24;
+
+            // 计算日期差距
+            var gap = Math.abs(today.getTime() - d.getTime());
+            var day_gap = Math.floor(gap / days);
+            var hour_gap = Math.floor((gap - day_gap * days) / hours);
+            var minute_gap = Math.floor((gap - day_gap * days - hour_gap * hours) / minutes);
+            var second_gap = Math.floor((gap - day_gap * days - hour_gap * hours - minute_gap * minutes) / 1000);
+
+            if (today < d) {
+                document.getElementById("result-wrapper").innerHTML = "现在距离 " + year_value + " 年 " + month_value + " 月 " + date_value + " 日 星期" + day_value + " " + hour_value + ":" + minute_value + ":" + second_value + " 还有 " + day_gap + " 天 " + hour_gap + " 小时 " + minute_gap + " 分 " + second_gap + " 秒 ";
+            } else {
+                document.getElementById("result-wrapper").innerHTML = "现在距离 " + year_value + " 年 " + month_value + " 月 " + date_value + " 日 星期" + day_value + " " + hour_value + ":" + minute_value + ":" + second_value + " 已经过去 " + day_gap + " 天 " + hour_gap + " 小时 " + minute_gap + " 分 " + second_gap + " 秒 ";
+            }
+        }
+
+        window.setInterval('refresh()', 500);
+        window.setInterval('startTime()', 1000);
+
+    </script>
+</body>
+
+</html>
