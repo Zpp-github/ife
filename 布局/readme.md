@@ -1,5 +1,14 @@
 ## demo预览
-- [ife任务.html](https://zpp-github.github.io/ife/%E5%B8%83%E5%B1%80/ife%E4%BB%BB%E5%8A%A1.html)
+### 需求
+**分别尝试使用Float、Position或者Flexbox来实现如下需求**
+- 实现一个两栏布局，左侧占30%宽度，右侧占70%宽度
+- 实现一个两栏布局，左侧固定宽度，右侧根据浏览器宽度进行自适应变化
+- 实现一个两栏布局，右侧固定宽度，左侧根据浏览器宽度进行自适应变化
+- 实现一个三栏布局，左侧固定宽度，右侧固定宽度，中间部分宽度随浏览器宽度变化而自适应变化
+- 实现一个三栏布局，左侧固定宽度，中间固定宽度，右侧根据浏览器宽度变化而自适应变化
+
+**要求**
+- 每一个需求都尽可能用多种方式来实现
 
 #### 两栏布局
 - [两栏布局flex左右百分比.html](https://zpp-github.github.io/ife/%E5%B8%83%E5%B1%80/flex/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80flex%E5%B7%A6%E5%8F%B3%E7%99%BE%E5%88%86%E6%AF%94.html)
@@ -10,9 +19,28 @@
 - [三栏布局flex左中固定右自适应.html](https://zpp-github.github.io/ife/%E5%B8%83%E5%B1%80/flex/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80flex%E5%B7%A6%E4%B8%AD%E5%9B%BA%E5%AE%9A%E5%8F%B3%E8%87%AA%E9%80%82%E5%BA%94.html)
 - [三栏布局flex左右固定中自适应.html](https://zpp-github.github.io/ife/%E5%B8%83%E5%B1%80/flex/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80flex%E5%B7%A6%E5%8F%B3%E5%9B%BA%E5%AE%9A%E4%B8%AD%E8%87%AA%E9%80%82%E5%BA%94.html)
 
-> 由于float、position方法与flex方法的效果图是相同的，便不展示了
+> 由于float、position方法与flex方法的效果图是相同的，便不展示了，详情请看代码
 
-#### 张鑫旭的三栏布局
+<br/>
+
+### 实战
+#### 需求
+实现HTML页面及CSS样式，设计稿参考：
+- [ife任务图.png](https://github.com/Zpp-github/ife/blob/master/%E5%B8%83%E5%B1%80/ife%E4%BB%BB%E5%8A%A1%E5%9B%BE.png) 
+- 或百度网盘 链接: [https://pan.baidu.com/s/1IndqG9nanVhKxwysibZZRg](https://pan.baidu.com/s/1IndqG9nanVhKxwysibZZRg) 密码: vfs6
+
+#### 设计稿描述
+- 设计稿分为头部，中间的Banner，主导航，内容区域，底部
+- 头部区域为100%宽的一个深色背景，头部中间有一块960px的定宽居中区域，里面包括了左边的Logo和右上角导航
+- Banner为100%宽的区块，中间右下方有banner轮显的当前图片数字的示例，其中正在显示的图片对应的数字有特殊样式（注意不需要实现轮显banner的业务逻辑，只是按照设计稿做静态样式）
+- 主导航区域，有一个100%宽的灰色线条，线条之上，在中间960px区域是导航菜单，当前正在浏览页对应的菜单有特殊样式
+- 主要内容区域，宽度为960px，里面每个内容都有至少80px的padding，每一个内容的宽度均为自适应，可以使用flex布局
+
+- [ife任务.html](https://zpp-github.github.io/ife/%E5%B8%83%E5%B1%80/ife%E4%BB%BB%E5%8A%A1.html)
+
+<br/>
+
+### 张鑫旭的三栏布局
 - 绝对定位position：[three-column-width-auto-1.html](https://zpp-github.github.io/ife/%E5%B8%83%E5%B1%80/%E5%BC%A0%E9%91%AB%E6%97%AD%E7%9A%84%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/three-column-width-auto-1.html)
 - margin负值：[three-column-width-auto-2.html](https://zpp-github.github.io/ife/%E5%B8%83%E5%B1%80/%E5%BC%A0%E9%91%AB%E6%97%AD%E7%9A%84%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/three-column-width-auto-2.html)
 - 浮动本身float：[three-column-width-auto-3.html](https://zpp-github.github.io/ife/%E5%B8%83%E5%B1%80/%E5%BC%A0%E9%91%AB%E6%97%AD%E7%9A%84%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/three-column-width-auto-3.html)
