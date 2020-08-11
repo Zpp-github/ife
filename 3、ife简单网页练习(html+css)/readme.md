@@ -2,7 +2,11 @@
 - [ife简单网页.html
 ](https://zpp-github.github.io/ife/3%E3%80%81ife%E7%AE%80%E5%8D%95%E7%BD%91%E9%A1%B5%E7%BB%83%E4%B9%A0(html%2Bcss)/ife%E7%AE%80%E5%8D%95%E7%BD%91%E9%A1%B5.html)
 
-<br/>
+> 练习切图、html、css
+#### 设计稿参考：
+- PSD：链接: [https://pan.baidu.com/s/18pPf7E0JOEbLqLUaQyUPdg](https://pan.baidu.com/s/18pPf7E0JOEbLqLUaQyUPdg) 密码: 33q7
+- JPG：链接: [https://pan.baidu.com/s/1ZhJh-N2_CFnJKzeoI1nuiA](https://pan.baidu.com/s/1ZhJh-N2_CFnJKzeoI1nuiA) 密码: e6th
+
 <br/>
 
 ## ife简单网页规范
