@@ -60,19 +60,25 @@
             second.add(num, null);
         }
 
-        //月份区别
+        //不同月份下的天数区别
         function refresh() {
             var year_value = year.options[year.selectedIndex].value;
             var month_value = month.options[month.selectedIndex].value;
             if (month_value == "4" || month_value == "6" || month_value == "9" || month_value == "11") {
                 day.options[30].hidden = true;
-            } else if (month_value == "2" && !(Number(year_value) % 4)) {
-                day.options[30].hidden = true;
-                day.options[29].hidden = true;
-            } else if (month_value == "2" && Number(year_value) % 4) {
+                day.options[29].hidden = false;
+                day.options[28].hidden = false;
+            } else if (month_value == "2") {
                 day.options[30].hidden = true;
                 day.options[29].hidden = true;
                 day.options[28].hidden = true;
+                if (year_value % 4 == 0 && year_value % 100 != 0 || year_value % 400 == 0) {
+                    day.options[28].hidden = false;
+                }
+            } else {
+                day.options[30].hidden = false;
+                day.options[29].hidden = false;
+                day.options[28].hidden = false;
             }
         }
 
@@ -110,8 +116,8 @@
             }
         }
 
-        window.setInterval('refresh()', 500);
-        window.setInterval('startTime()', 1000);
+        window.setInterval(refresh, 500);
+        window.setInterval(startTime, 1000);
 
     </script>
 </body>
