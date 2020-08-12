@@ -32,6 +32,9 @@
 - [MDN-盒模型](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model)
 - [MDN-再述盒模型](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_boxes/Box_model_recap)
 - [W3C](https://www.w3.org/TR/2011/REC-CSS2-20110607/box.html#box-model)
+- [浅谈CSS Sprite和实例解析](https://blog.csdn.net/u011349149/article/details/24181675)
+- [CSS 使用Sprites技术实现圆角效果](http://www.jb51.net/article/83111.htm)
+- [CSS Sprites:实用技术还是生厌之物 | 张鑫旭](http://www.zhangxinxu.com/wordpress/2010/03/%E7%BF%BB%E8%AF%91-css-sprites%E5%AE%9E%E7%94%A8%E6%8A%80%E6%9C%AF%E8%BF%98%E6%98%AF%E7%94%9F%E5%8E%8C%E4%B9%8B%E7%89%A9%EF%BC%9F/)
 
 #### 浮动
 - [MDN-浮动](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
@@ -95,9 +98,6 @@
 - [JS中setTimeout()的用法详解](http://www.jb51.net/article/35535.htm)
 - [SetInterval | W3School](http://www.w3school.com.cn/jsref/met_win_setinterval.asp)
 - [JavaScript中SetInterval与setTimeout的用法详解](http://www.jb51.net/article/74606.htm)
-- [浅谈CSS Sprite和实例解析](https://blog.csdn.net/u011349149/article/details/24181675)
-- [CSS 使用Sprites技术实现圆角效果](http://www.jb51.net/article/83111.htm)
-- [SS Sprites:实用技术还是生厌之物 | 张鑫旭](http://www.zhangxinxu.com/wordpress/2010/03/%E7%BF%BB%E8%AF%91-css-sprites%E5%AE%9E%E7%94%A8%E6%8A%80%E6%9C%AF%E8%BF%98%E6%98%AF%E7%94%9F%E5%8E%8C%E4%B9%8B%E7%89%A9%EF%BC%9F/)
 - [变量 | W3School](http://www.w3school.com.cn/js/js_variables.asp)
 - [变量 | MDN](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/Variables)
 - [数据类型 | W3School](http://www.w3school.com.cn/js/js_datatypes.asp)
@@ -118,6 +118,16 @@
 - [队列](https://baike.baidu.com/item/%E9%98%9F%E5%88%97/14580481?fr=aladdin)
 - [栈](https://baike.baidu.com/item/%E6%A0%88/12808149)
 - [Array.prototype.sort() 排序 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+- [Web安全之XSS攻防](https://blog.csdn.net/ganyingxie123456/article/details/70230486)
+- [javascript对HTML字符转义与反转义](https://www.cnblogs.com/GumpYan/p/7883133.html)
+- [键盘 | MDN](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode)
+
+#### 辅助
+- [流程图怎么画](https://blog.csdn.net/qq1515312832/article/details/78857718)
+- [流程图怎么画？超详细教程，各种高逼格流程图轻松搞定！](https://blog.csdn.net/pdfzhuanhua/article/details/85281247?utm_medium=distribute.pc_relevant.none-task-blog-baidulandingword-1&spm=1001.2101.3001.4242)
+
+工具：
+- [Processon](https://www.processon.com/)
 
 ### 问
 - HTML是什么，HTML5是什么
