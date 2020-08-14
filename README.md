@@ -1,3 +1,5 @@
+#### [ife2018](http://ife.baidu.com/college/detail/id/5)的内容即需求、设计、思路等都在每个文件夹的readme.md的内，方便以后查找或者再次练习
+
 ### 参考与学习
 - [编码规范](https://github.com/ecomfe/spec)
 - [Web 建站技术中，HTML、HTML5、XHTML、CSS、SQL、JavaScript、PHP、ASP.NET、Web Services 是什么？](https://www.zhihu.com/question/22689579)
