@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我是精明的小卖家(一)</title>
+    <link rel="stylesheet" href="css/sellerSelect.css">
+    <script src="js/ife31data.js"></script>
+</head>
+
+<body>
+    地区：
+    <select id="region-select" name="region">
+        <option>--请选择--</option>
+        <option>华东</option>
+        <option>华北</option>
+        <option>华南</option>
+    </select>
+
+    商品种类：
+    <select id="product-select" name="product">
+        <option>--请选择--</option>
+        <option>手机</option>
+        <option>笔记本</option>
+        <option>智能音箱</option>
+    </select>
+
+    <div id="table-wrapper">
+    </div>
+
+    <!-- 涉及js、dom加载和执行顺序 1、置于body最后或外部 2、把执行放在onload事件中 -->
+    <!-- 1、只筛选地区 -->
+    <!-- <script src="js/region.js"></script> -->
+
+    <!-- 2、筛选地区和商品种类 -->
+    <script src="js/regionAndProduct.js"></script>
+</body>
+
+
+</html>
