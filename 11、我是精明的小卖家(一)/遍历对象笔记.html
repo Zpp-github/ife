@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历对象</title>
+</head>
+
+<body>
+    <script>
+        var data = [{
+            product: "手机",
+            region: "华东",
+            sale: [120, 100, 140, 160, 180, 185, 190, 210, 230, 245, 255, 270]
+        }, {
+            product: "手机",
+            region: "华北",
+            sale: [80, 70, 90, 110, 130, 145, 150, 160, 170, 185, 190, 200]
+        }, {
+            product: "手机",
+            region: "华南",
+            sale: [220, 200, 240, 250, 260, 270, 280, 295, 310, 335, 355, 380]
+        }]
+
+        console.log('1.data:');
+        console.log(data);
+
+        console.log('2.data.length:');
+        console.log(data.length);
+
+        console.log('3.data[0]:');
+        console.log(data[0]);
+
+        console.log("4.data[0]['product']:");
+        console.log(data[0]['product']);
+
+        console.log("5.data[0].product:");
+        console.log(data[0].product);
+
+        console.log("6.data[0]['sale'][3]:");
+        console.log(data[0]['sale'][3]);
+
+        console.log('7.data[0].sale[3]:');
+        console.log(data[0].sale[3]);
+
+        console.log("8.data[2]['region']:");
+        console.log(data[2]['region']);
+
+        console.log('9.data[2].region:');
+        console.log(data[2].region);
+
+
+        var star = {
+            name: '张三疯',
+            age: 128,
+            sex: '男',
+            sayHi: function () {
+                alert('大家好啊~');
+            }
+        }
+        // for (变量 in 对象名字) { }
+        console.log('10.遍历对象：');
+        for (var k in star) {
+            console.log(star[k]);
+        }
+        console.log('11.star:');
+        console.log(star);
+
+        console.log('12.star.name:');
+        console.log(star.name);
+
+        console.log("13.star['name']:");
+        console.log(star['name']);
+    </script>
+</body>
+
+</html>
