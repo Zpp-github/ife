@@ -1,0 +1,38 @@
+body,
+select,
+option,
+div,
+table,
+tr,
+th,
+td,
+tbody,
+thead {
+    margin: 0;
+    padding: 0;
+}
+
+#region-select,
+#product-select {
+    width: 84px;
+    height: 30px;
+    outline: none;
+    margin: 10px 20px 25px 0;
+    cursor: pointer;
+}
+
+table {
+    margin-left: 8px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border-bottom: 1px solid red;
+}
+
+th,
+td {
+    padding: 10px;
+}
