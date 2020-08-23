@@ -100,6 +100,8 @@ function 根据select选项获取数据() {
 }
 ```
 
+- [sellerSelect.html](https://zpp-github.github.io/ife/11%E3%80%81%E6%88%91%E6%98%AF%E7%B2%BE%E6%98%8E%E7%9A%84%E5%B0%8F%E5%8D%96%E5%AE%B6(%E4%B8%80)/sellerSelect.html)
+
 ### 再进阶
 ##### 需求
 - 我们发现，有时候我们不止要看某个地区的数据，我们可能会想同时看好几个地区的数据，或者我们想看某个地区所有商品的销售情况，所以我们需要把地区及商品从单选改成多选
@@ -201,6 +203,8 @@ function 获取数据 {
 }
 ```
 
+- [sellerCheck.html](https://zpp-github.github.io/ife/11%E3%80%81%E6%88%91%E6%98%AF%E7%B2%BE%E6%98%8E%E7%9A%84%E5%B0%8F%E5%8D%96%E5%AE%B6(%E4%B8%80)/sellerCheck.html)
+
 ### 多选的表格渲染
 ##### 需求
 现在，我们给表格也提出了更复杂的需求，之前我们仅仅需要单纯的遍历数据，然后一行一行，一格一格输出即可，但当突然出现多选的情况下，我们会期望有更好的阅读体验：
@@ -220,3 +224,5 @@ function 获取数据 {
 <br/>
 
 如果你有余力，可以开始使用webpack来进行打包，如果没有，或者你发现看了几眼就看不下去了，那么就只在你的html里多添加几个js即可，注意app.js应该放在几个js文件引用的最后一个。
+
+- [seller.html](https://zpp-github.github.io/ife/11%E3%80%81%E6%88%91%E6%98%AF%E7%B2%BE%E6%98%8E%E7%9A%84%E5%B0%8F%E5%8D%96%E5%AE%B6(%E4%B8%80)/seller/seller.html)
