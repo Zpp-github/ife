@@ -1,0 +1,42 @@
+body,
+div,
+table,
+tr,
+th,
+td,
+tbody,
+thead,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    margin-left: 8px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border-bottom: 1px solid red;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+input {
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+#region-radio-wrapper,
+#product-radio-wrapper {
+    margin-bottom: 15px;
+}
+
+.right {
+    border-right: 1px solid red;
+}
