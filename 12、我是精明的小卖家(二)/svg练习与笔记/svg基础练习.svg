@@ -1,0 +1,126 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="100%" height="100%" version="1.1"
+xmlns="http://www.w3.org/2000/svg">
+
+
+<!-- 圆形-->
+<g>
+<circle cx="100" cy="50" r="40" stroke="black"
+stroke-width="2" fill="red"/>
+</g>
+
+
+<!-- 矩形-->
+<g>
+<rect x="200" y="10" width="300" height="100"
+style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0);
+fill-opacity:0.1;stroke-opacity:0.9"/>
+
+<rect x="550" y="10" rx="20" ry="20" width="300" height="100"
+style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0);
+opacity:0.5"/>
+</g>
+
+
+<!-- 椭圆 -->
+<g>
+<ellipse cx="250" cy="250" rx="200" ry="80"
+style="fill:rgb(200,100,50);
+stroke:rgb(0,0,100);stroke-width:2"/>
+
+<!-- 三个累叠而上的椭圆 -->
+<ellipse cx="700" cy="260" rx="220" ry="30"
+style="fill:purple"/>
+<ellipse cx="700" cy="230" rx="190" ry="20"
+style="fill:lime"/>
+<ellipse cx="700" cy="205" rx="170" ry="15"
+style="fill:yellow"/>
+
+<!-- 组合椭圆（内白外黄） -->
+<ellipse cx="240" cy="400" rx="220" ry="30"
+style="fill:yellow"/>
+<ellipse cx="220" cy="400" rx="190" ry="20"
+style="fill:white"/>
+</g>
+
+
+<!-- 线 -->
+<g>
+<line x1="370" y1="150" x2="700" y2="400"
+style="stroke:rgb(99,99,99);stroke-width:2"/>
+</g>
+
+
+<!-- 多边形 -->
+<g>
+<!-- 三角形 -->
+<polygon points="100,450 180,560 80,550"
+style="fill:#cccccc;
+stroke:#000000;stroke-width:1"/>
+
+<!-- 四角形 -->
+<polygon points="317,440 397,550 264,590 220,574"
+style="fill:#cccccc;
+stroke:#000000;stroke-width:1"/>
+
+<!-- 五角星 -->
+<polygon points="540,380 480,568 630,448 450,448 600,568"
+style="fill:lime;stroke:purple;stroke-width:5;fill-rule:nonzero;" />
+
+<!-- 五角星(中间空) -->
+<polygon points="750,380 690,568 840,448 660,448 810,568"
+style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+</g>
+
+
+<!-- 折线 -->
+<g>
+<polyline points="10,600 10,630 50,630 50,660 90,660 90,690"
+style="fill:white;stroke:red;stroke-width:2"/>
+</g>
+
+
+<!-- 路径 -->
+<g>
+<!-- 三角形 -->
+<path d="M250 600 L200 700 L300 700 Z" />
+
+<!-- 螺旋 -->
+<path d="M453 634
+C453 634 451 634 451 634
+C451 639 453 644 456 644
+C464 644 471 639 471 634
+C471 622 464 614 456 614
+C442 614 431 622 431 634
+C431 650 442 664 456 664
+C475 664 491 650 491 634
+C491 611 475 594 456 594
+C431 594 411 611 411 634
+C411 661 431 684 456 684
+C486 684 511 661 511 634
+C511 600 486 574 456 574"
+style="fill:white;stroke:red;stroke-width:2"/>
+</g>
+
+
+<!-- 显示文字 -->
+<g>
+<text x="666" y="630" font-size="35" text-anchor="middle" 
+fill="red">Hello world</text>
+
+<!-- 空心文字 -->
+<text x="666" y="666" font-size="35" text-anchor="middle" 
+fill="none" stroke-width="1" stroke="red">Hello world</text>
+</g>
+
+
+<!-- 一颗小树 -->
+<g>
+<polyline points="900 700, 900 650, 840 650, 880 590, 860 590, 900 530, 940 590, 920 590, 960 650, 900 650" 
+stroke="red" fill="transparent" stroke-width="2" />
+</g>
+
+</svg>
