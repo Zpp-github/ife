@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas练习</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- canvas盒子 -->
+    <canvas id="tutorial" width="150" height="150">
+        <!-- 替换内容 -->
+        current stock price: $3.15 +0.15
+    </canvas>
+
+    <!-- 画一条线 -->
+    <canvas id="line" width="150" height="150"></canvas>
+
+    <!-- 画一个矩形 -->
+    <canvas id="rec" width="150" height="150"></canvas>
+
+    <!-- 画一个圆形 -->
+    <canvas id="circle" width="150" height="150"></canvas>
+
+    <!-- 显示一些文字 -->
+    <canvas id="text" width="150" height="150"></canvas>
+
+    <!-- 画一个时钟 -->
+    <canvas id="clock" width="150" height="150"></canvas>
+
+    <!-- 画一朵云 -->
+    <canvas id="cloud" width="150" height="150"></canvas>
+
+    <!-- 两个矩形部分叠加，其中一个半透明 -->
+    <canvas id="twoRectangles" width="150" height="150">
+        <!-- 替换内容 -->
+        <img src="#" width="150" height="150" alt="" />
+    </canvas>
+
+    <!-- 绘制矩形、边框、清除指定区域，让清除部分完全透明 -->
+    <canvas id="rectangular" width="150" height="150"></canvas>
+
+    <!-- 从上到下的渐变 -->
+    <canvas id="topToBottom" width="150" height="150"></canvas>
+
+    <!-- 从左到右的渐变 -->
+    <canvas id="leftToRight" width="150" height="150"></canvas>
+
+    <!-- 从左到右，从黑到红到白的的渐变 -->
+    <canvas id="leftToCenterToRight" width="150" height="150"></canvas>
+
+    <!-- 绘制三角形 -->
+    <canvas id="delta" width="150" height="150"></canvas>
+
+    <script>
+        // canvas盒子
+        var canvas = document.getElementById('tutorial');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+            // drawing code here
+        } else {
+            // canvas-unsupported code here
+        }
+
+        // 画一条线
+        var line = document.getElementById("line");
+        if (line.getContext) {
+            var ctx1 = line.getContext('2d');
+            ctx1.beginPath();
+            ctx1.moveTo(25, 50);
+            ctx1.lineTo(100, 100);
+            ctx1.strokeStyle = 'red';
+            ctx1.stroke();
+        }
+
+        // 画一个矩形
+        var rec = document.getElementById('rec');
+        if (rec.getContext) {
+            var ctx2 = rec.getContext('2d');
+            ctx2.strokeRect(25, 25, 100, 80);
+        }
+
+        // 画一个圆形
+        var circle = document.getElementById('circle');
+        if (circle.getContext) {
+            var ctx3 = circle.getContext('2d');
+            ctx3.arc(75, 75, 50, 0, Math.PI * 2, true);
+            ctx3.stroke();
+        }
+
+        // 显示一些文字
+        var text = document.getElementById('text');
+        if (text.getContext) {
+            var ctx4 = text.getContext('2d');
+            ctx4.font = "24px serif";
+            ctx4.fillText('Hello World', 10, 70);
+        }
+
+        // 画一个时钟
+        var ctx5 = document.getElementById('clock').getContext('2d');
+        ctx5.arc(75, 75, 60, 0, Math.PI * 2);
+        ctx5.moveTo(125, 75);
+        ctx5.arc(75, 75, 50, 0, Math.PI * 2);
+        ctx5.moveTo(120, 75);
+        ctx5.lineTo(75, 75);
+        ctx5.lineTo(75, 30);
+        ctx5.strokeStyle = 'gray';
+        ctx5.stroke();
+
+        // 画一朵云
+        var ctx6 = document.getElementById('cloud').getContext('2d');
+        ctx6.moveTo(61, 65);
+        ctx6.quadraticCurveTo(36, 25, 21, 65);
+        ctx6.quadraticCurveTo(0, 80, 27, 95);
+        ctx6.quadraticCurveTo(45, 130, 75, 100);
+        ctx6.quadraticCurveTo(125, 120, 105, 75);
+        ctx6.quadraticCurveTo(105, 30, 60, 65);
+        ctx6.stroke();
+
+        // 两个矩形部分叠加，其中一个半透明
+        var twoRectangles = document.getElementById("twoRectangles");
+        if (twoRectangles.getContext) {
+            var ctx7 = twoRectangles.getContext("2d");
+
+            ctx7.fillStyle = "rgb(200,0,0)";
+            ctx7.fillRect(10, 10, 55, 50);
+
+            ctx7.fillStyle = "rgba(0, 0, 200, 0.5)";
+            ctx7.fillRect(30, 30, 55, 50);
+        } else {
+            // canvas-unsupported code here
+        }
+
+        // 绘制矩形、边框、清除指定区域，让清除部分完全透明
+        var rectangular = document.getElementById('rectangular');
+        if (rectangular.getContext) {
+            var ctx8 = rectangular.getContext('2d');
+            // fillRect()函数绘制了一个边长为100px的黑色正方形
+            ctx8.fillRect(25, 25, 100, 100);
+            // clearRect()函数从正方形的中心开始擦除了一个60*60px的正方形
+            ctx8.clearRect(45, 45, 60, 60);
+            // 接着strokeRect()在清除区域内生成一个50*50的正方形边框
+            ctx8.strokeRect(50, 50, 50, 50);
+        }
+
+        // 从上到下的渐变
+        var topToBottom = document.getElementById("topToBottom");
+        var ctx9 = topToBottom.getContext("2d");
+        var my_gradient = ctx9.createLinearGradient(0, 0, 0, 170);
+        my_gradient.addColorStop(0, "black");
+        my_gradient.addColorStop(1, "white");
+        ctx9.fillStyle = my_gradient;
+        ctx9.fillRect(20, 20, 120, 100);
+
+        // 从左到右的渐变
+        var leftToRight = document.getElementById("leftToRight");
+        var ctx10 = leftToRight.getContext("2d");
+        var my_gradient = ctx10.createLinearGradient(0, 0, 170, 0);
+        my_gradient.addColorStop(0, "black");
+        my_gradient.addColorStop(1, "white");
+        ctx10.fillStyle = my_gradient;
+        ctx10.fillRect(20, 20, 120, 100);
+
+        // 从左到右，从黑到红到白的的渐变
+        var leftToCenterToRight = document.getElementById("leftToCenterToRight");
+        var ctx11 = leftToCenterToRight.getContext("2d");
+        var my_gradient = ctx11.createLinearGradient(0, 0, 170, 0);
+        my_gradient.addColorStop(0, "black");
+        my_gradient.addColorStop(0.5, "red");
+        my_gradient.addColorStop(1, "white");
+        ctx11.fillStyle = my_gradient;
+        ctx11.fillRect(20, 20, 120, 100);
+
+        // 绘制三角形
+        var delta = document.getElementById('delta');
+        if (delta.getContext) {
+            var ctx12 = delta.getContext('2d');
+            ctx12.beginPath();
+            ctx12.moveTo(75, 50);
+            ctx12.lineTo(100, 75);
+            ctx12.lineTo(100, 25);
+            ctx12.fill();
+        }
+    </script>
+</body>
+
+</html>
