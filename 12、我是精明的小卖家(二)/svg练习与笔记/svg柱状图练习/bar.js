@@ -108,12 +108,12 @@ for (let i = 0; i < sourceData.length; i++) {
             rect.setAttribute('fill', `url(#g${j})`);
             main.appendChild(rect);
 
-            // 动态添加数据具体项名称
-            let text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-            text.setAttribute('x', (2 * j + 1) * colWidth + 55);
-            text.setAttribute('y', 625);
-            text.innerHTML = j + 1 + '月';
-            main.appendChild(text);
+            // 设置x轴刻度
+            let xText1 = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+            xText1.setAttribute('x', (2 * j + 1) * colWidth + 55);
+            xText1.setAttribute('y', 625);
+            xText1.innerHTML = j + 1 + '月';
+            main.appendChild(xText1);
 
             // 动态添加数据具体项的值
             let val = document.createElementNS('http://www.w3.org/2000/svg', 'text');
