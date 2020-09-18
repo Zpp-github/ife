@@ -1,0 +1,68 @@
+body,
+div,
+table,
+tr,
+th,
+td,
+tbody,
+thead,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    margin-left: 8px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border-bottom: 1px solid red;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+input {
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+/* 多选按钮 */
+#radio-wrapper {
+    margin: 20px 50px;
+}
+
+#region-radio-wrapper,
+#product-radio-wrapper {
+    margin-bottom: 15px;
+}
+
+/* 表格 */
+#table-wrapper {
+    margin: 20px 45px;
+}
+
+/* 表格右边的竖线 */
+.right {
+    border-right: 1px solid red;
+}
+
+
+/* 图表 */
+#chart-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#chart-using-svg,
+#chart-using-canvas {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 456px;
+}
