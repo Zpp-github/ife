@@ -68,6 +68,8 @@ function 绘制一个柱状图(柱状图数据) {
 }
 ```
 
+- [demo](https://zpp-github.github.io/ife/12%E3%80%81%E6%88%91%E6%98%AF%E7%B2%BE%E6%98%8E%E7%9A%84%E5%B0%8F%E5%8D%96%E5%AE%B6(%E4%BA%8C)/svg%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AC%94%E8%AE%B0/svg%E6%9F%B1%E7%8A%B6%E5%9B%BE%E7%BB%83%E4%B9%A0/svg%E4%B9%8B%E6%9F%B1%E7%8A%B6%E5%9B%BE.html)
+
 #### Canvas小练习
 这个练习的代码和报表页面无关，单独新开一个页面来实现，通过Canvas实现如下需求
 - 画一条线
@@ -76,6 +78,8 @@ function 绘制一个柱状图(柱状图数据) {
 - 显示一些文字
 - 画一个时钟
 - 画一朵云
+
+- [demo](https://zpp-github.github.io/ife/12%E3%80%81%E6%88%91%E6%98%AF%E7%B2%BE%E6%98%8E%E7%9A%84%E5%B0%8F%E5%8D%96%E5%AE%B6(%E4%BA%8C)/canvas%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AC%94%E8%AE%B0/canvas%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0.html)
 
 ### 折线图
 #### 需求
@@ -112,6 +116,8 @@ function 绘制一个折线图(折线图数据) {
     }    
 }
 ```
+
+- [demo](https://zpp-github.github.io/ife/12%E3%80%81%E6%88%91%E6%98%AF%E7%B2%BE%E6%98%8E%E7%9A%84%E5%B0%8F%E5%8D%96%E5%AE%B6(%E4%BA%8C)/canvas%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AC%94%E8%AE%B0/canvas%E6%8A%98%E7%BA%BF%E5%9B%BE%E7%BB%83%E4%B9%A0/canvas%E4%B9%8B%E6%8A%98%E7%BA%BF%E5%9B%BE.html)
 
 #### 让图表数据可变
 上面我们的数据都是用的固定的，接下来我们需要让图表的数据可变。
