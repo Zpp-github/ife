@@ -32,14 +32,17 @@ input {
     margin-right: 5px;
 }
 
+.description {
+    margin: 5px 50px;
+    color: #bbb;
+}
 /* 多选按钮 */
 #radio-wrapper {
-    margin: 20px 50px;
+    margin: 10px 50px;
 }
 
-#region-radio-wrapper,
-#product-radio-wrapper {
-    margin-bottom: 15px;
+#region-radio-wrapper {
+    margin-bottom: 10px;
 }
 
 /* 表格 */
