@@ -151,6 +151,21 @@
 - [CSS3 三次贝塞尔曲线(cubic-bezier)](https://blog.csdn.net/zhaozjc112/article/details/52909172)
 - [正态分布介绍](https://open.163.com/newview/movie/free?pid=M82IC6GQU&mid=M83JBFVGI)
 
+#### 数据可视化
+- [数据可视化百科词条](https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/1252367?fr=aladdin)
+- [ECharts数据可视化规范](https://vis.baidu.com/chartusage/overview/)
+- [SVG课程 | W3School](https://www.w3school.com.cn/svg/index.asp)
+- [SVG | MDN](https://developer.mozilla.org/zh-CN/docs/Web/SVG)
+- [SVG text属性 | 思否](https://segmentfault.com/a/1190000009293590)
+- [Canvas | W3school](https://www.w3school.com.cn/tags/html_ref_canvas.asp)
+- [Canvas | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial)
+- [绘制多个柱状图代码例子](https://echarts.apache.org/examples/zh/editor.html?c=bar-label-rotation)
+
+#### LocalStorage
+- [HTML5 本地存储五种方案](https://blog.csdn.net/arvin0/article/details/51158836)
+- [LocalStorage | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/localStorage)
+- [HTML 5 Web 存储](https://www.w3school.com.cn/html5/html_5_webstorage.asp)
+
 #### 辅助
 - [流程图怎么画](https://blog.csdn.net/qq1515312832/article/details/78857718)
 - [流程图怎么画？超详细教程，各种高逼格流程图轻松搞定！](https://blog.csdn.net/pdfzhuanhua/article/details/85281247?utm_medium=distribute.pc_relevant.none-task-blog-baidulandingword-1&spm=1001.2101.3001.4242)
