@@ -1,5 +1,7 @@
 #### [ife2018](http://ife.baidu.com/college/detail/id/5)的内容即需求、设计、思路等都在每个文件夹的readme.md的内，方便以后查找或者再次练习
 
+- [一些相关资料](https://github.com/Zpp-github/ife/blob/master/note.md)
+
 | title | code | preview | note |
 | -- | :-: | -- | -- |
 | jianli1.html | [代码](https://github.com/Zpp-github/ife/blob/master/%E5%90%84%E7%A7%8D%E7%AE%80%E5%8E%86/jianli1.html) | [预览](https://zpp-github.github.io/ife/%E5%90%84%E7%A7%8D%E7%AE%80%E5%8E%86/jianli1.html) |
