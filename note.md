@@ -160,6 +160,7 @@
 - [Canvas | W3school](https://www.w3school.com.cn/tags/html_ref_canvas.asp)
 - [Canvas | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial)
 - [绘制多个柱状图代码例子](https://echarts.apache.org/examples/zh/editor.html?c=bar-label-rotation)
+- [document.createElementNS](https://segmentfault.com/a/1190000021258267)
 
 #### LocalStorage
 - [HTML5 本地存储五种方案](https://blog.csdn.net/arvin0/article/details/51158836)
